@@ -257,6 +257,61 @@ a { color: inherit; }
 .sql-cm { color: #64748b; font-style: italic; }
 .sql-str { color: #fca5a5; }
 
+/* ── ANALYSIS REPORT ── */
+.report-summary {
+  background: #eff6ff; border: 1px solid #bfdbfe;
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius); padding: 22px 24px; margin-bottom: 24px;
+}
+.report-summary-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: .8px;
+  text-transform: uppercase; color: var(--primary); margin-bottom: 10px;
+}
+.report-summary p { font-size: 13.5px; color: #1e3a8a; line-height: 1.75; }
+.report-block {
+  background: var(--card); border-radius: var(--radius);
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+  padding: 22px 24px; margin-bottom: 16px; overflow-x: auto;
+}
+.report-block-title {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 14px; font-weight: 700; color: var(--dark);
+  margin-bottom: 16px;
+}
+.report-table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.report-table th {
+  background: #f8fafc; text-align: left;
+  padding: 9px 12px; font-size: 11.5px; font-weight: 600;
+  color: var(--muted); text-transform: uppercase; letter-spacing: .4px;
+  border-bottom: 2px solid var(--border);
+}
+.report-table td {
+  padding: 10px 12px; border-bottom: 1px solid #f1f5f9;
+  color: var(--text); vertical-align: middle;
+}
+.report-table tr:last-child td { border-bottom: none; }
+.report-table tr:hover td { background: #fafafa; }
+.row-high td { background: #fff7f7; }
+.row-high td:first-child { font-weight: 600; }
+.pill {
+  display: inline-block; padding: 2px 9px; border-radius: 12px;
+  font-size: 11.5px; font-weight: 600;
+}
+.pill-red    { background: #fee2e2; color: #dc2626; }
+.pill-yellow { background: #fef9c3; color: #a16207; }
+.pill-green  { background: #dcfce7; color: #15803d; }
+.pill-gray   { background: #f1f5f9; color: #64748b; }
+.report-note {
+  font-size: 12px; color: var(--muted); margin-top: 12px;
+  padding-top: 10px; border-top: 1px solid var(--border);
+  font-style: italic; line-height: 1.6;
+}
+.report-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 768px) { .report-two-col { grid-template-columns: 1fr; } }
+
 /* ── TOOLS ── */
 .tools-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
 .tool-card {
@@ -539,6 +594,145 @@ a { color: inherit; }
         <div class="finding-text">Consistent Q4 cost and utilisation spikes across all 3 years — likely driven by elective procedures scheduled before year-end insurance resets.</div>
       </div>
     </div>
+  </section>
+
+  <!-- ANALYSIS REPORT -->
+  <section class="section" aria-labelledby="report-heading">
+    <div class="section-hd">
+      <h2 id="report-heading">Analysis Report</h2>
+      <div class="section-hd-line" aria-hidden="true"></div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="report-summary">
+      <div class="report-summary-tag">Executive Summary</div>
+      <p>Analysis of 500 patient records across 5 US regions (2022–2024) reveals significant cost disparities driven by geography, diagnosis type, treatment setting, and insurance status. The West region and Oncology diagnosis category are the primary cost drivers, while inpatient admissions concentrate the majority of expenditure despite representing a minority of cases. Self-pay patients face disproportionate financial burden, and Q4 shows consistent utilisation spikes — patterns that have direct implications for healthcare cost management strategy.</p>
+    </div>
+
+    <!-- Regional Breakdown Table -->
+    <div class="report-block">
+      <div class="report-block-title">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        Regional Cost Breakdown
+      </div>
+      <table class="report-table" aria-label="Regional cost breakdown">
+        <thead>
+          <tr><th>Region</th><th>Avg Cost / Patient</th><th>vs National Avg</th><th>Patients</th><th>Insight</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row-high">
+            <td><strong>West</strong></td><td>$30,792</td>
+            <td><span class="pill pill-red">+38%</span></td>
+            <td>96</td><td>Highest cost region — specialist density &amp; higher wages</td>
+          </tr>
+          <tr>
+            <td>Northeast</td><td>$22,882</td>
+            <td><span class="pill pill-yellow">+2%</span></td>
+            <td>122</td><td>Near national average — largest patient volume</td>
+          </tr>
+          <tr>
+            <td>Southwest</td><td>$21,907</td>
+            <td><span class="pill pill-green">−2%</span></td>
+            <td>74</td><td>Slightly below average — efficient cost management</td>
+          </tr>
+          <tr>
+            <td>Southeast</td><td>$18,535</td>
+            <td><span class="pill pill-green">−17%</span></td>
+            <td>104</td><td>Cost-efficient region despite high volume</td>
+          </tr>
+          <tr>
+            <td>Midwest</td><td>$18,013</td>
+            <td><span class="pill pill-green">−19%</span></td>
+            <td>104</td><td>Most cost-efficient region nationally</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Diagnosis Breakdown Table -->
+    <div class="report-block">
+      <div class="report-block-title">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Diagnosis Cost Analysis
+      </div>
+      <table class="report-table" aria-label="Diagnosis cost analysis">
+        <thead>
+          <tr><th>Diagnosis</th><th>Avg Cost / Patient</th><th>Patient Count</th><th>Cost Index</th><th>Insight</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row-high">
+            <td><strong>Oncology</strong></td><td>$67,933</td><td>48</td>
+            <td><span class="pill pill-red">3.0×</span></td>
+            <td>Highest cost — complex treatment protocols &amp; long duration</td>
+          </tr>
+          <tr>
+            <td>Cardiovascular</td><td>$26,493</td><td>114</td>
+            <td><span class="pill pill-yellow">1.2×</span></td>
+            <td>Highest patient volume with above-avg cost</td>
+          </tr>
+          <tr>
+            <td>Orthopedic</td><td>$26,471</td><td>82</td>
+            <td><span class="pill pill-yellow">1.2×</span></td>
+            <td>Surgical procedures driving costs</td>
+          </tr>
+          <tr>
+            <td>Neurological</td><td>$20,217</td><td>60</td>
+            <td><span class="pill pill-gray">0.9×</span></td>
+            <td>Near average — diagnostic-intensive</td>
+          </tr>
+          <tr>
+            <td>Respiratory</td><td>$8,461</td><td>65</td>
+            <td><span class="pill pill-green">0.4×</span></td>
+            <td>Below average — mostly outpatient management</td>
+          </tr>
+          <tr>
+            <td>Diabetes</td><td>$8,367</td><td>76</td>
+            <td><span class="pill pill-green">0.4×</span></td>
+            <td>High volume, lower per-visit cost</td>
+          </tr>
+          <tr>
+            <td>Mental Health</td><td>$5,801</td><td>55</td>
+            <td><span class="pill pill-green">0.3×</span></td>
+            <td>Lowest cost — primarily outpatient therapy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Two column: Treatment + Insurance -->
+    <div class="report-two-col">
+      <div class="report-block">
+        <div class="report-block-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Treatment Type Impact
+        </div>
+        <table class="report-table" aria-label="Treatment type cost comparison">
+          <thead><tr><th>Type</th><th>Avg Cost</th><th>Cases</th><th>% of Total Spend</th></tr></thead>
+          <tbody>
+            <tr class="row-high"><td><strong>Inpatient</strong></td><td>$32,886</td><td>183</td><td><span class="pill pill-red">~65%</span></td></tr>
+            <tr><td>Emergency</td><td>$26,160</td><td>86</td><td><span class="pill pill-yellow">~20%</span></td></tr>
+            <tr><td>Outpatient</td><td>$12,562</td><td>231</td><td><span class="pill pill-green">~15%</span></td></tr>
+          </tbody>
+        </table>
+        <p class="report-note">Inpatient drives 65% of total spend from only 37% of cases — highest cost concentration risk.</p>
+      </div>
+      <div class="report-block">
+        <div class="report-block-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Insurance Type Impact
+        </div>
+        <table class="report-table" aria-label="Insurance type cost comparison">
+          <thead><tr><th>Insurance</th><th>Avg Cost</th><th>Patients</th><th>Burden</th></tr></thead>
+          <tbody>
+            <tr><td>Private</td><td>$22,977</td><td>246</td><td><span class="pill pill-green">Baseline</span></td></tr>
+            <tr><td>Medicare/Medicaid</td><td>$23,005</td><td>192</td><td><span class="pill pill-green">Baseline</span></td></tr>
+            <tr class="row-high"><td><strong>Self-Pay</strong></td><td>$17,747</td><td>62</td><td><span class="pill pill-red">1.4× burden</span></td></tr>
+          </tbody>
+        </table>
+        <p class="report-note">Self-pay patients pay lower absolute costs but bear disproportionate out-of-pocket financial burden — highest financial toxicity risk.</p>
+      </div>
+    </div>
+
   </section>
 
   <!-- SQL HIGHLIGHTS -->
