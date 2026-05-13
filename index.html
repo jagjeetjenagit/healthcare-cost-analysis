@@ -28,6 +28,21 @@
     display: flex; align-items: center; justify-content: space-between;
   }
   .header-left h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+
+  /* Nav bar */
+  .nav-bar {
+    background: white; border-bottom: 1px solid #e2e8f0;
+    padding: 10px 40px; display: flex; gap: 12px; align-items: center;
+  }
+  .nav-bar span { font-size: 13px; color: #64748b; }
+  .nav-btn {
+    padding: 6px 16px; border-radius: 6px; font-size: 13px;
+    text-decoration: none; font-weight: 500; transition: all 0.15s;
+    border: 1px solid #e2e8f0;
+  }
+  .nav-btn.active { background: #1a56db; color: white; border-color: #1a56db; }
+  .nav-btn.inactive { background: white; color: #1a56db; }
+  .nav-btn.inactive:hover { background: #e8f0fe; }
   .header-left p { font-size: 13px; opacity: 0.85; }
   .header-right { text-align: right; font-size: 12px; opacity: 0.80; line-height: 1.8; }
   .header-right a { color: #a5c8ff; text-decoration: none; }
@@ -106,6 +121,12 @@
     <a href="https://linkedin.com/in/jagjeet-jena" target="_blank">LinkedIn</a><br>
     Tools: Python &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Plotly
   </div>
+</div>
+
+<div class="nav-bar">
+  <span>View:</span>
+  <a href="index.html" class="nav-btn active">Plotly Dashboard</a>
+  <a href="tableau.html" class="nav-btn inactive">Tableau Dashboard</a>
 </div>
 
 <div class="container">

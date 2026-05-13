@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Cost Analysis — Tableau Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4f8; color: #1e293b; }
+
+  .header {
+    background: linear-gradient(135deg, #1a56db 0%, #0e3a8c 100%);
+    color: white;
+    padding: 24px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .header-left h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .header-left p { font-size: 13px; opacity: 0.85; }
+  .header-right { text-align: right; font-size: 12px; opacity: 0.85; line-height: 1.8; }
+  .header-right a { color: #a5c8ff; text-decoration: none; }
+
+  .nav-bar {
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 40px;
+    display: flex; gap: 12px; align-items: center;
+  }
+  .nav-bar span { font-size: 13px; color: #64748b; }
+  .nav-btn {
+    padding: 6px 16px; border-radius: 6px; font-size: 13px;
+    text-decoration: none; font-weight: 500; transition: all 0.15s;
+    border: 1px solid #e2e8f0;
+  }
+  .nav-btn.active { background: #1a56db; color: white; border-color: #1a56db; }
+  .nav-btn.inactive { background: white; color: #1a56db; }
+  .nav-btn.inactive:hover { background: #e8f0fe; }
+
+  .container { max-width: 1500px; margin: 24px auto; padding: 0 24px; }
+
+  .tableau-wrap {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .tableau-label {
+    font-size: 12px; color: #64748b;
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tableau-label span {
+    background: #e8f0fe; color: #1a56db;
+    padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+  }
+
+  .footer {
+    text-align: center; padding: 20px;
+    font-size: 12px; color: #64748b;
+    border-top: 1px solid #e2e8f0; margin-top: 8px;
+  }
+  .footer a { color: #1a56db; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1>Healthcare Cost Analysis Dashboard</h1>
+    <p>Cost patterns across regions, diagnoses, and patient demographics &nbsp;|&nbsp; 2022–2024</p>
+  </div>
+  <div class="header-right">
+    <strong>Jagjeet Jena</strong> &nbsp;|&nbsp; Data Analyst<br>
+    <a href="https://github.com/jagjeetjenagit/healthcare-cost-analysis" target="_blank">GitHub</a>
+    &nbsp;|&nbsp;
+    <a href="https://linkedin.com/in/jagjeet-jena" target="_blank">LinkedIn</a><br>
+    Tools: Python &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Tableau
+  </div>
+</div>
+
+<div class="nav-bar">
+  <span>View:</span>
+  <a href="index.html" class="nav-btn inactive">Plotly Dashboard</a>
+  <a href="tableau.html" class="nav-btn active">Tableau Dashboard</a>
+</div>
+
+<div class="container">
+  <div class="tableau-wrap">
+    <div class="tableau-label">
+      <span>TABLEAU PUBLIC</span>
+      Interactive dashboard — use filters to explore by Region and Year
+    </div>
+
+    <div class='tableauPlaceholder' id='viz1778639005942' style='position: relative'>
+      <noscript>
+        <a href='#'>
+          <img alt='Healthcare Cost Analysis Dashboard 500 Patients | 5 Regions | 7 Diagnoses | 2022–2024'
+               src='https://public.tableau.com/static/images/He/Healthcare-Cost-Analysis/HealthcareCostAnalysisDashboard/1_rss.png'
+               style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='Healthcare-Cost-Analysis&#47;HealthcareCostAnalysisDashboard' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/He/Healthcare-Cost-Analysis/HealthcareCostAnalysisDashboard/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-GB' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1778639005942');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.minWidth = '1400px';
+        vizElement.style.maxWidth = '100%';
+        vizElement.style.minHeight = '877px';
+        vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.minWidth = '1400px';
+        vizElement.style.maxWidth = '100%';
+        vizElement.style.minHeight = '877px';
+        vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+      } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '2027px';
+      }
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+  </div>
+</div>
+
+<div class="footer">
+  Built by <a href="https://linkedin.com/in/jagjeet-jena" target="_blank">Jagjeet Jena</a>
+  &nbsp;|&nbsp;
+  <a href="https://github.com/jagjeetjenagit/healthcare-cost-analysis" target="_blank">View Code on GitHub</a>
+  &nbsp;|&nbsp;
+  Data: Synthetic dataset based on US healthcare benchmarks
+</div>
+
+</body>
+</html>
