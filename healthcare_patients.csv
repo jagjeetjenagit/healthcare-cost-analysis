@@ -1,0 +1,501 @@
+Patient_ID,Age,Age_Group,Gender,Region,Diagnosis,Treatment_Type,Insurance_Type,Admission_Date,Length_of_Stay,Treatment_Cost,Year,Quarter,Year_Quarter
+P0001,86,76+,Male,Southeast,Respiratory,Emergency,Medicare/Medicaid,2022-08-01,1,9130,2022,Q3,2022 Q3
+P0002,19,18-30,Male,West,Mental Health,Outpatient,Private Insurance,2022-10-03,1,3600,2022,Q4,2022 Q4
+P0003,61,61-75,Male,Southeast,Cardiovascular,Outpatient,Medicare/Medicaid,2023-06-26,1,12380,2023,Q2,2023 Q2
+P0004,42,31-45,Female,Northeast,Orthopedic,Inpatient,Private Insurance,2022-08-25,12,30910,2022,Q3,2022 Q3
+P0005,50,46-60,Female,Northeast,Cardiovascular,Outpatient,Self-Pay,2022-08-08,0,6840,2022,Q3,2022 Q3
+P0006,49,46-60,Female,Southeast,Diabetes,Outpatient,Private Insurance,2022-11-15,1,5350,2022,Q4,2022 Q4
+P0007,64,61-75,Male,Southeast,Diabetes,Outpatient,Self-Pay,2023-07-12,2,3570,2023,Q3,2023 Q3
+P0008,63,61-75,Female,Northeast,Respiratory,Inpatient,Self-Pay,2023-08-01,2,21870,2023,Q3,2023 Q3
+P0009,57,46-60,Male,West,Mental Health,Outpatient,Self-Pay,2023-03-08,2,2400,2023,Q1,2023 Q1
+P0010,32,31-45,Female,Midwest,Orthopedic,Inpatient,Private Insurance,2023-12-04,19,29190,2023,Q4,2023 Q4
+P0011,56,46-60,Female,West,Respiratory,Inpatient,Medicare/Medicaid,2023-02-21,16,16410,2023,Q1,2023 Q1
+P0012,72,61-75,Female,Northeast,Cardiovascular,Outpatient,Private Insurance,2023-06-25,1,21500,2023,Q2,2023 Q2
+P0013,75,61-75,Female,Midwest,Orthopedic,Inpatient,Medicare/Medicaid,2024-11-01,3,26300,2024,Q4,2024 Q4
+P0014,26,18-30,Female,West,Mental Health,Outpatient,Medicare/Medicaid,2024-09-27,0,2980,2024,Q3,2024 Q3
+P0015,32,31-45,Male,Southeast,Mental Health,Outpatient,Private Insurance,2023-05-30,2,4110,2023,Q2,2023 Q2
+P0016,40,31-45,Female,Southeast,Mental Health,Outpatient,Private Insurance,2022-04-15,1,2410,2022,Q2,2022 Q2
+P0017,67,61-75,Male,Midwest,Cardiovascular,Inpatient,Medicare/Medicaid,2022-07-09,21,42740,2022,Q3,2022 Q3
+P0018,76,76+,Female,West,Mental Health,Emergency,Medicare/Medicaid,2024-05-17,4,12230,2024,Q2,2024 Q2
+P0019,18,18-30,Male,Southeast,Respiratory,Outpatient,Self-Pay,2023-07-21,2,3000,2023,Q3,2023 Q3
+P0020,62,61-75,Male,Midwest,Neurological,Inpatient,Medicare/Medicaid,2022-04-01,16,22560,2022,Q2,2022 Q2
+P0021,64,61-75,Male,Midwest,Cardiovascular,Outpatient,Medicare/Medicaid,2022-01-08,0,10440,2022,Q1,2022 Q1
+P0022,49,46-60,Male,Midwest,Respiratory,Outpatient,Private Insurance,2023-11-15,0,3800,2023,Q4,2023 Q4
+P0023,39,31-45,Female,Southwest,Cardiovascular,Outpatient,Private Insurance,2022-09-25,1,19670,2022,Q3,2022 Q3
+P0024,70,61-75,Female,Southeast,Cardiovascular,Inpatient,Medicare/Medicaid,2023-06-21,19,24460,2023,Q2,2023 Q2
+P0025,61,61-75,Male,West,Orthopedic,Inpatient,Private Insurance,2022-11-27,6,55780,2022,Q4,2022 Q4
+P0026,84,76+,Male,Midwest,Orthopedic,Outpatient,Private Insurance,2024-06-23,1,8090,2024,Q2,2024 Q2
+P0027,21,18-30,Female,Midwest,Respiratory,Outpatient,Private Insurance,2024-05-25,1,2700,2024,Q2,2024 Q2
+P0028,42,31-45,Male,Northeast,Respiratory,Outpatient,Medicare/Medicaid,2022-01-20,2,4800,2022,Q1,2022 Q1
+P0029,28,18-30,Female,Northeast,Diabetes,Inpatient,Private Insurance,2022-08-18,17,6350,2022,Q3,2022 Q3
+P0030,57,46-60,Female,Southeast,Mental Health,Inpatient,Medicare/Medicaid,2022-06-04,5,14560,2022,Q2,2022 Q2
+P0031,26,18-30,Female,Midwest,Oncology,Emergency,Private Insurance,2022-11-02,1,42250,2022,Q4,2022 Q4
+P0032,24,18-30,Female,Southeast,Oncology,Inpatient,Private Insurance,2022-03-15,21,81730,2022,Q1,2022 Q1
+P0033,64,61-75,Male,Midwest,Neurological,Inpatient,Medicare/Medicaid,2024-01-27,9,36100,2024,Q1,2024 Q1
+P0034,83,76+,Female,Northeast,Neurological,Outpatient,Private Insurance,2022-10-31,2,8580,2022,Q4,2022 Q4
+P0035,55,46-60,Male,West,Respiratory,Outpatient,Medicare/Medicaid,2024-05-30,0,2920,2024,Q2,2024 Q2
+P0036,50,46-60,Male,Southeast,Orthopedic,Inpatient,Private Insurance,2022-09-19,11,27640,2022,Q3,2022 Q3
+P0037,58,46-60,Female,Midwest,Cardiovascular,Outpatient,Private Insurance,2022-03-27,2,8810,2022,Q1,2022 Q1
+P0038,59,46-60,Male,West,Neurological,Outpatient,Private Insurance,2023-09-24,0,7040,2023,Q3,2023 Q3
+P0039,76,76+,Female,Northeast,Cardiovascular,Outpatient,Private Insurance,2024-01-17,2,16800,2024,Q1,2024 Q1
+P0040,88,76+,Female,West,Orthopedic,Inpatient,Private Insurance,2022-03-23,15,57740,2022,Q1,2022 Q1
+P0041,30,18-30,Female,Southeast,Neurological,Inpatient,Medicare/Medicaid,2024-01-03,4,36790,2024,Q1,2024 Q1
+P0042,33,31-45,Female,West,Orthopedic,Outpatient,Private Insurance,2023-03-07,0,13820,2023,Q1,2023 Q1
+P0043,57,46-60,Male,Midwest,Cardiovascular,Inpatient,Private Insurance,2023-05-27,5,17960,2023,Q2,2023 Q2
+P0044,52,46-60,Male,Northeast,Orthopedic,Inpatient,Medicare/Medicaid,2022-07-30,16,34590,2022,Q3,2022 Q3
+P0045,23,18-30,Female,West,Diabetes,Inpatient,Private Insurance,2023-12-26,5,16460,2023,Q4,2023 Q4
+P0046,35,31-45,Male,West,Diabetes,Outpatient,Medicare/Medicaid,2024-04-12,2,8930,2024,Q2,2024 Q2
+P0047,33,31-45,Female,West,Diabetes,Outpatient,Private Insurance,2022-11-13,0,10590,2022,Q4,2022 Q4
+P0048,34,31-45,Female,West,Cardiovascular,Inpatient,Private Insurance,2023-04-30,17,82210,2023,Q2,2023 Q2
+P0049,30,18-30,Female,Midwest,Diabetes,Outpatient,Private Insurance,2022-11-29,2,4170,2022,Q4,2022 Q4
+P0050,36,31-45,Male,West,Respiratory,Inpatient,Private Insurance,2022-12-29,11,22710,2022,Q4,2022 Q4
+P0051,47,46-60,Male,West,Cardiovascular,Outpatient,Medicare/Medicaid,2024-04-24,2,16360,2024,Q2,2024 Q2
+P0052,32,31-45,Male,Northeast,Mental Health,Inpatient,Private Insurance,2022-02-20,10,9270,2022,Q1,2022 Q1
+P0053,52,46-60,Male,Northeast,Oncology,Inpatient,Private Insurance,2023-01-03,15,67460,2023,Q1,2023 Q1
+P0054,77,76+,Female,Midwest,Diabetes,Inpatient,Medicare/Medicaid,2023-11-12,17,10150,2023,Q4,2023 Q4
+P0055,66,61-75,Male,Northeast,Respiratory,Inpatient,Private Insurance,2024-04-23,17,13150,2024,Q2,2024 Q2
+P0056,74,61-75,Male,West,Cardiovascular,Emergency,Medicare/Medicaid,2023-05-24,2,78160,2023,Q2,2023 Q2
+P0057,51,46-60,Male,Northeast,Orthopedic,Inpatient,Self-Pay,2023-07-01,16,28350,2023,Q3,2023 Q3
+P0058,40,31-45,Female,West,Cardiovascular,Inpatient,Private Insurance,2022-11-23,19,55460,2022,Q4,2022 Q4
+P0059,80,76+,Female,Northeast,Orthopedic,Outpatient,Private Insurance,2022-08-10,0,16510,2022,Q3,2022 Q3
+P0060,30,18-30,Male,West,Cardiovascular,Emergency,Private Insurance,2024-02-23,4,36480,2024,Q1,2024 Q1
+P0061,18,18-30,Male,Midwest,Cardiovascular,Emergency,Private Insurance,2022-03-21,2,18890,2022,Q1,2022 Q1
+P0062,57,46-60,Male,Southwest,Cardiovascular,Inpatient,Private Insurance,2024-08-21,21,60130,2024,Q3,2024 Q3
+P0063,38,31-45,Male,Southeast,Respiratory,Outpatient,Medicare/Medicaid,2023-04-01,2,2790,2023,Q2,2023 Q2
+P0064,26,18-30,Female,Midwest,Mental Health,Inpatient,Private Insurance,2023-02-13,6,4320,2023,Q1,2023 Q1
+P0065,47,46-60,Female,West,Neurological,Inpatient,Private Insurance,2024-07-31,4,52040,2024,Q3,2024 Q3
+P0066,90,76+,Male,West,Neurological,Outpatient,Private Insurance,2023-12-18,1,23430,2023,Q4,2023 Q4
+P0067,37,31-45,Male,Midwest,Diabetes,Outpatient,Private Insurance,2023-09-18,1,3230,2023,Q3,2023 Q3
+P0068,62,61-75,Female,West,Cardiovascular,Outpatient,Private Insurance,2023-04-12,1,17580,2023,Q2,2023 Q2
+P0069,69,61-75,Male,Southwest,Cardiovascular,Outpatient,Private Insurance,2023-04-02,2,16050,2023,Q2,2023 Q2
+P0070,80,76+,Female,Southeast,Respiratory,Inpatient,Private Insurance,2022-02-18,10,8060,2022,Q1,2022 Q1
+P0071,59,46-60,Male,Southeast,Mental Health,Outpatient,Medicare/Medicaid,2023-01-31,0,2050,2023,Q1,2023 Q1
+P0072,41,31-45,Female,Southeast,Diabetes,Inpatient,Medicare/Medicaid,2024-03-27,11,13890,2024,Q1,2024 Q1
+P0073,40,31-45,Male,Southwest,Orthopedic,Outpatient,Private Insurance,2023-11-04,2,17970,2023,Q4,2023 Q4
+P0074,45,31-45,Female,Southwest,Cardiovascular,Inpatient,Medicare/Medicaid,2023-07-25,11,60390,2023,Q3,2023 Q3
+P0075,74,61-75,Female,Southeast,Respiratory,Inpatient,Private Insurance,2022-05-23,20,6660,2022,Q2,2022 Q2
+P0076,51,46-60,Male,Southeast,Cardiovascular,Inpatient,Private Insurance,2023-07-26,20,27110,2023,Q3,2023 Q3
+P0077,40,31-45,Male,Southwest,Oncology,Emergency,Medicare/Medicaid,2023-12-21,4,85950,2023,Q4,2023 Q4
+P0078,34,31-45,Male,West,Orthopedic,Outpatient,Medicare/Medicaid,2024-11-09,0,14800,2024,Q4,2024 Q4
+P0079,72,61-75,Male,Midwest,Oncology,Inpatient,Private Insurance,2024-03-29,16,100880,2024,Q1,2024 Q1
+P0080,47,46-60,Male,Midwest,Orthopedic,Inpatient,Medicare/Medicaid,2023-11-10,19,48210,2023,Q4,2023 Q4
+P0081,18,18-30,Male,Northeast,Orthopedic,Inpatient,Medicare/Medicaid,2022-02-26,17,32520,2022,Q1,2022 Q1
+P0082,71,61-75,Female,West,Diabetes,Inpatient,Private Insurance,2022-08-25,13,17200,2022,Q3,2022 Q3
+P0083,34,31-45,Male,Midwest,Cardiovascular,Emergency,Private Insurance,2023-06-19,3,41630,2023,Q2,2023 Q2
+P0084,58,46-60,Male,Northeast,Neurological,Outpatient,Medicare/Medicaid,2023-01-01,2,21780,2023,Q1,2023 Q1
+P0085,65,61-75,Female,Southeast,Cardiovascular,Emergency,Medicare/Medicaid,2023-06-28,5,33400,2023,Q2,2023 Q2
+P0086,62,61-75,Male,West,Neurological,Outpatient,Medicare/Medicaid,2022-03-20,1,19230,2022,Q1,2022 Q1
+P0087,59,46-60,Female,Northeast,Oncology,Inpatient,Private Insurance,2022-08-11,16,75920,2022,Q3,2022 Q3
+P0088,21,18-30,Male,Midwest,Cardiovascular,Inpatient,Private Insurance,2024-06-08,12,35640,2024,Q2,2024 Q2
+P0089,74,61-75,Female,Southeast,Neurological,Inpatient,Medicare/Medicaid,2023-12-09,8,29970,2023,Q4,2023 Q4
+P0090,32,31-45,Female,Southwest,Cardiovascular,Emergency,Private Insurance,2023-10-05,2,28220,2023,Q4,2023 Q4
+P0091,52,46-60,Female,Southeast,Diabetes,Outpatient,Private Insurance,2024-06-12,2,3160,2024,Q2,2024 Q2
+P0092,22,18-30,Female,Midwest,Diabetes,Outpatient,Medicare/Medicaid,2024-11-13,1,2410,2024,Q4,2024 Q4
+P0093,83,76+,Male,Southeast,Neurological,Emergency,Medicare/Medicaid,2022-08-25,2,10690,2022,Q3,2022 Q3
+P0094,41,31-45,Female,Southeast,Neurological,Emergency,Private Insurance,2024-02-28,4,9930,2024,Q1,2024 Q1
+P0095,74,61-75,Male,Midwest,Neurological,Outpatient,Private Insurance,2023-01-25,0,11190,2023,Q1,2023 Q1
+P0096,81,76+,Male,Southeast,Orthopedic,Outpatient,Medicare/Medicaid,2023-06-06,1,12960,2023,Q2,2023 Q2
+P0097,48,46-60,Male,West,Respiratory,Emergency,Private Insurance,2022-04-01,4,11530,2022,Q2,2022 Q2
+P0098,23,18-30,Female,West,Orthopedic,Outpatient,Private Insurance,2024-06-12,2,18220,2024,Q2,2024 Q2
+P0099,66,61-75,Male,Midwest,Respiratory,Outpatient,Private Insurance,2022-01-04,1,4120,2022,Q1,2022 Q1
+P0100,34,31-45,Female,West,Neurological,Outpatient,Medicare/Medicaid,2024-11-30,1,14750,2024,Q4,2024 Q4
+P0101,28,18-30,Female,Southwest,Cardiovascular,Outpatient,Self-Pay,2023-02-08,2,7000,2023,Q1,2023 Q1
+P0102,35,31-45,Female,Midwest,Diabetes,Inpatient,Self-Pay,2024-01-16,6,10520,2024,Q1,2024 Q1
+P0103,72,61-75,Female,West,Orthopedic,Outpatient,Private Insurance,2024-06-02,1,22750,2024,Q2,2024 Q2
+P0104,60,46-60,Male,Southeast,Diabetes,Outpatient,Private Insurance,2022-05-24,0,4270,2022,Q2,2022 Q2
+P0105,86,76+,Male,Southeast,Cardiovascular,Inpatient,Medicare/Medicaid,2023-11-08,6,43330,2023,Q4,2023 Q4
+P0106,56,46-60,Male,West,Oncology,Outpatient,Private Insurance,2023-10-05,2,39490,2023,Q4,2023 Q4
+P0107,32,31-45,Male,Southeast,Neurological,Emergency,Medicare/Medicaid,2022-09-13,5,30020,2022,Q3,2022 Q3
+P0108,85,76+,Male,Southwest,Cardiovascular,Outpatient,Private Insurance,2023-09-08,1,13840,2023,Q3,2023 Q3
+P0109,41,31-45,Male,Southeast,Cardiovascular,Inpatient,Private Insurance,2024-11-04,5,44120,2024,Q4,2024 Q4
+P0110,63,61-75,Male,Northeast,Cardiovascular,Outpatient,Private Insurance,2023-09-26,1,19660,2023,Q3,2023 Q3
+P0111,69,61-75,Female,Northeast,Orthopedic,Inpatient,Private Insurance,2024-04-16,5,27730,2024,Q2,2024 Q2
+P0112,29,18-30,Female,Midwest,Orthopedic,Inpatient,Medicare/Medicaid,2023-10-31,18,37450,2023,Q4,2023 Q4
+P0113,34,31-45,Male,Southeast,Neurological,Outpatient,Self-Pay,2024-04-04,1,8110,2024,Q2,2024 Q2
+P0114,20,18-30,Female,West,Cardiovascular,Outpatient,Private Insurance,2023-08-29,0,20690,2023,Q3,2023 Q3
+P0115,68,61-75,Male,Midwest,Orthopedic,Outpatient,Medicare/Medicaid,2022-09-18,2,11570,2022,Q3,2022 Q3
+P0116,24,18-30,Male,Southwest,Oncology,Outpatient,Private Insurance,2023-01-28,0,36180,2023,Q1,2023 Q1
+P0117,22,18-30,Female,Southwest,Cardiovascular,Emergency,Self-Pay,2024-05-11,4,31090,2024,Q2,2024 Q2
+P0118,45,31-45,Female,Southwest,Orthopedic,Inpatient,Private Insurance,2024-02-16,6,46680,2024,Q1,2024 Q1
+P0119,41,31-45,Male,Northeast,Cardiovascular,Outpatient,Private Insurance,2022-12-23,0,15370,2022,Q4,2022 Q4
+P0120,57,46-60,Female,West,Cardiovascular,Outpatient,Medicare/Medicaid,2023-09-09,1,12150,2023,Q3,2023 Q3
+P0121,69,61-75,Female,Southwest,Neurological,Inpatient,Self-Pay,2024-04-11,10,26660,2024,Q2,2024 Q2
+P0122,21,18-30,Female,Northeast,Neurological,Inpatient,Medicare/Medicaid,2022-01-01,12,39240,2022,Q1,2022 Q1
+P0123,56,46-60,Female,Southeast,Diabetes,Inpatient,Private Insurance,2023-09-15,21,22840,2023,Q3,2023 Q3
+P0124,81,76+,Female,Northeast,Orthopedic,Outpatient,Medicare/Medicaid,2023-08-11,2,22140,2023,Q3,2023 Q3
+P0125,74,61-75,Male,Southwest,Cardiovascular,Inpatient,Private Insurance,2023-03-07,14,19630,2023,Q1,2023 Q1
+P0126,43,31-45,Male,Southwest,Orthopedic,Outpatient,Medicare/Medicaid,2024-05-30,2,14930,2024,Q2,2024 Q2
+P0127,58,46-60,Male,Midwest,Mental Health,Emergency,Private Insurance,2023-10-22,1,10330,2023,Q4,2023 Q4
+P0128,76,76+,Male,Northeast,Diabetes,Outpatient,Medicare/Medicaid,2024-08-10,1,5970,2024,Q3,2024 Q3
+P0129,79,76+,Female,Northeast,Oncology,Outpatient,Private Insurance,2024-06-23,2,43750,2024,Q2,2024 Q2
+P0130,59,46-60,Male,Southeast,Mental Health,Outpatient,Medicare/Medicaid,2024-06-24,2,3690,2024,Q2,2024 Q2
+P0131,61,61-75,Female,West,Neurological,Inpatient,Private Insurance,2023-03-14,14,32980,2023,Q1,2023 Q1
+P0132,73,61-75,Female,Northeast,Mental Health,Inpatient,Medicare/Medicaid,2024-11-12,12,10330,2024,Q4,2024 Q4
+P0133,36,31-45,Female,Midwest,Oncology,Outpatient,Medicare/Medicaid,2024-08-27,2,28120,2024,Q3,2024 Q3
+P0134,37,31-45,Female,Southwest,Neurological,Outpatient,Private Insurance,2022-12-14,2,11020,2022,Q4,2022 Q4
+P0135,35,31-45,Female,Northeast,Respiratory,Inpatient,Private Insurance,2022-06-23,17,17040,2022,Q2,2022 Q2
+P0136,19,18-30,Male,West,Cardiovascular,Inpatient,Private Insurance,2023-08-05,19,38860,2023,Q3,2023 Q3
+P0137,64,61-75,Female,Northeast,Mental Health,Inpatient,Self-Pay,2024-11-21,3,10560,2024,Q4,2024 Q4
+P0138,45,31-45,Male,West,Diabetes,Outpatient,Medicare/Medicaid,2023-11-18,2,5580,2023,Q4,2023 Q4
+P0139,40,31-45,Female,West,Diabetes,Inpatient,Private Insurance,2022-07-11,4,18590,2022,Q3,2022 Q3
+P0140,45,31-45,Male,Southwest,Diabetes,Outpatient,Medicare/Medicaid,2023-04-27,0,2810,2023,Q2,2023 Q2
+P0141,57,46-60,Female,West,Cardiovascular,Inpatient,Medicare/Medicaid,2023-09-28,11,69140,2023,Q3,2023 Q3
+P0142,66,61-75,Female,Northeast,Respiratory,Emergency,Medicare/Medicaid,2023-04-06,2,16830,2023,Q2,2023 Q2
+P0143,49,46-60,Male,Midwest,Diabetes,Inpatient,Private Insurance,2023-02-12,4,8290,2023,Q1,2023 Q1
+P0144,71,61-75,Male,West,Respiratory,Inpatient,Medicare/Medicaid,2022-10-29,15,11640,2022,Q4,2022 Q4
+P0145,25,18-30,Female,Southwest,Orthopedic,Inpatient,Self-Pay,2022-02-20,5,32360,2022,Q1,2022 Q1
+P0146,82,76+,Female,Southwest,Respiratory,Emergency,Medicare/Medicaid,2022-04-05,1,16140,2022,Q2,2022 Q2
+P0147,28,18-30,Female,West,Cardiovascular,Inpatient,Medicare/Medicaid,2023-05-17,16,32360,2023,Q2,2023 Q2
+P0148,53,46-60,Female,Southwest,Mental Health,Inpatient,Private Insurance,2024-08-31,7,5670,2024,Q3,2024 Q3
+P0149,33,31-45,Male,Southwest,Mental Health,Inpatient,Medicare/Medicaid,2022-05-30,11,7130,2022,Q2,2022 Q2
+P0150,80,76+,Male,Midwest,Respiratory,Outpatient,Medicare/Medicaid,2024-07-21,0,2870,2024,Q3,2024 Q3
+P0151,63,61-75,Male,West,Diabetes,Outpatient,Medicare/Medicaid,2024-04-28,0,4860,2024,Q2,2024 Q2
+P0152,34,31-45,Female,Northeast,Orthopedic,Outpatient,Medicare/Medicaid,2023-02-03,1,7300,2023,Q1,2023 Q1
+P0153,42,31-45,Male,West,Orthopedic,Emergency,Medicare/Medicaid,2024-02-26,1,52530,2024,Q1,2024 Q1
+P0154,26,18-30,Female,West,Diabetes,Inpatient,Medicare/Medicaid,2024-10-09,11,19110,2024,Q4,2024 Q4
+P0155,84,76+,Female,Midwest,Diabetes,Inpatient,Private Insurance,2024-03-29,13,5480,2024,Q1,2024 Q1
+P0156,80,76+,Female,Southeast,Oncology,Outpatient,Private Insurance,2023-05-15,1,52580,2023,Q2,2023 Q2
+P0157,72,61-75,Female,West,Respiratory,Outpatient,Medicare/Medicaid,2022-10-30,1,11780,2022,Q4,2022 Q4
+P0158,70,61-75,Female,Southwest,Diabetes,Emergency,Medicare/Medicaid,2022-01-12,2,7380,2022,Q1,2022 Q1
+P0159,37,31-45,Male,Midwest,Cardiovascular,Emergency,Self-Pay,2022-08-07,2,28970,2022,Q3,2022 Q3
+P0160,75,61-75,Female,West,Respiratory,Emergency,Private Insurance,2024-05-20,5,11180,2024,Q2,2024 Q2
+P0161,70,61-75,Female,Northeast,Respiratory,Emergency,Private Insurance,2023-03-25,4,10810,2023,Q1,2023 Q1
+P0162,52,46-60,Female,Southeast,Orthopedic,Inpatient,Self-Pay,2022-12-27,20,18560,2022,Q4,2022 Q4
+P0163,23,18-30,Female,Midwest,Cardiovascular,Emergency,Medicare/Medicaid,2024-11-26,2,54300,2024,Q4,2024 Q4
+P0164,49,46-60,Male,West,Orthopedic,Inpatient,Private Insurance,2024-08-09,7,48410,2024,Q3,2024 Q3
+P0165,78,76+,Male,Midwest,Cardiovascular,Outpatient,Private Insurance,2022-04-13,0,12510,2022,Q2,2022 Q2
+P0166,69,61-75,Female,Midwest,Orthopedic,Inpatient,Medicare/Medicaid,2023-05-26,4,24680,2023,Q2,2023 Q2
+P0167,53,46-60,Male,West,Orthopedic,Outpatient,Medicare/Medicaid,2022-09-06,2,39240,2022,Q3,2022 Q3
+P0168,62,61-75,Female,West,Diabetes,Emergency,Medicare/Medicaid,2024-07-23,4,26150,2024,Q3,2024 Q3
+P0169,58,46-60,Female,Midwest,Diabetes,Outpatient,Self-Pay,2022-10-01,2,5150,2022,Q4,2022 Q4
+P0170,61,61-75,Male,Northeast,Respiratory,Emergency,Medicare/Medicaid,2024-08-09,2,14180,2024,Q3,2024 Q3
+P0171,74,61-75,Female,West,Cardiovascular,Outpatient,Medicare/Medicaid,2024-12-23,1,16450,2024,Q4,2024 Q4
+P0172,47,46-60,Male,Northeast,Oncology,Outpatient,Self-Pay,2023-10-12,2,40120,2023,Q4,2023 Q4
+P0173,63,61-75,Female,Midwest,Mental Health,Outpatient,Private Insurance,2024-06-25,0,2620,2024,Q2,2024 Q2
+P0174,86,76+,Female,Northeast,Orthopedic,Outpatient,Medicare/Medicaid,2024-10-30,0,24050,2024,Q4,2024 Q4
+P0175,48,46-60,Female,Northeast,Respiratory,Outpatient,Self-Pay,2024-05-23,1,5530,2024,Q2,2024 Q2
+P0176,58,46-60,Male,Northeast,Oncology,Outpatient,Self-Pay,2024-07-02,2,23920,2024,Q3,2024 Q3
+P0177,28,18-30,Male,Southeast,Orthopedic,Outpatient,Self-Pay,2022-11-22,1,13200,2022,Q4,2022 Q4
+P0178,67,61-75,Female,Northeast,Cardiovascular,Inpatient,Medicare/Medicaid,2024-08-30,16,50680,2024,Q3,2024 Q3
+P0179,27,18-30,Female,Northeast,Diabetes,Outpatient,Private Insurance,2024-07-10,1,1820,2024,Q3,2024 Q3
+P0180,32,31-45,Female,Southeast,Cardiovascular,Outpatient,Private Insurance,2023-06-15,2,16300,2023,Q2,2023 Q2
+P0181,37,31-45,Male,Southeast,Cardiovascular,Inpatient,Self-Pay,2023-05-22,2,21400,2023,Q2,2023 Q2
+P0182,67,61-75,Male,Northeast,Diabetes,Emergency,Private Insurance,2023-07-22,4,7360,2023,Q3,2023 Q3
+P0183,70,61-75,Male,Midwest,Mental Health,Emergency,Private Insurance,2024-12-03,3,4080,2024,Q4,2024 Q4
+P0184,38,31-45,Female,Southwest,Neurological,Inpatient,Medicare/Medicaid,2024-09-19,19,27780,2024,Q3,2024 Q3
+P0185,54,46-60,Male,Midwest,Cardiovascular,Outpatient,Medicare/Medicaid,2023-05-05,0,14160,2023,Q2,2023 Q2
+P0186,35,31-45,Male,Northeast,Orthopedic,Emergency,Self-Pay,2023-07-17,1,15160,2023,Q3,2023 Q3
+P0187,54,46-60,Female,Southeast,Diabetes,Emergency,Medicare/Medicaid,2024-06-19,4,8680,2024,Q2,2024 Q2
+P0188,44,31-45,Male,West,Orthopedic,Inpatient,Medicare/Medicaid,2022-06-08,13,65710,2022,Q2,2022 Q2
+P0189,61,61-75,Female,Northeast,Neurological,Inpatient,Private Insurance,2023-08-09,20,58450,2023,Q3,2023 Q3
+P0190,28,18-30,Female,Northeast,Neurological,Inpatient,Medicare/Medicaid,2023-04-26,11,20900,2023,Q2,2023 Q2
+P0191,57,46-60,Female,Midwest,Cardiovascular,Outpatient,Medicare/Medicaid,2023-07-11,2,10590,2023,Q3,2023 Q3
+P0192,62,61-75,Male,Southeast,Cardiovascular,Outpatient,Medicare/Medicaid,2023-11-19,1,13490,2023,Q4,2023 Q4
+P0193,56,46-60,Male,Midwest,Neurological,Outpatient,Medicare/Medicaid,2023-10-17,2,13650,2023,Q4,2023 Q4
+P0194,75,61-75,Female,Southwest,Neurological,Outpatient,Private Insurance,2022-06-15,1,9970,2022,Q2,2022 Q2
+P0195,26,18-30,Female,Northeast,Respiratory,Outpatient,Private Insurance,2022-10-11,1,7390,2022,Q4,2022 Q4
+P0196,43,31-45,Female,Southwest,Cardiovascular,Emergency,Medicare/Medicaid,2022-11-05,3,15420,2022,Q4,2022 Q4
+P0197,22,18-30,Male,Northeast,Cardiovascular,Inpatient,Medicare/Medicaid,2023-04-19,8,25740,2023,Q2,2023 Q2
+P0198,73,61-75,Female,West,Respiratory,Outpatient,Medicare/Medicaid,2024-02-24,1,7390,2024,Q1,2024 Q1
+P0199,71,61-75,Female,Northeast,Cardiovascular,Inpatient,Private Insurance,2022-11-09,17,24360,2022,Q4,2022 Q4
+P0200,81,76+,Female,Southeast,Neurological,Outpatient,Self-Pay,2023-03-15,0,4800,2023,Q1,2023 Q1
+P0201,62,61-75,Female,Midwest,Cardiovascular,Inpatient,Private Insurance,2022-05-12,9,26130,2022,Q2,2022 Q2
+P0202,22,18-30,Female,West,Oncology,Outpatient,Private Insurance,2024-04-29,1,68770,2024,Q2,2024 Q2
+P0203,24,18-30,Female,Southwest,Oncology,Emergency,Private Insurance,2024-04-14,5,40110,2024,Q2,2024 Q2
+P0204,78,76+,Male,Northeast,Cardiovascular,Inpatient,Private Insurance,2023-11-09,13,42370,2023,Q4,2023 Q4
+P0205,53,46-60,Female,Northeast,Orthopedic,Emergency,Medicare/Medicaid,2024-08-12,5,45570,2024,Q3,2024 Q3
+P0206,18,18-30,Male,Northeast,Respiratory,Inpatient,Medicare/Medicaid,2024-05-01,11,11910,2024,Q2,2024 Q2
+P0207,87,76+,Male,Southwest,Mental Health,Outpatient,Private Insurance,2022-05-08,2,2800,2022,Q2,2022 Q2
+P0208,90,76+,Male,West,Neurological,Emergency,Self-Pay,2023-02-28,3,28930,2023,Q1,2023 Q1
+P0209,57,46-60,Male,Midwest,Respiratory,Inpatient,Medicare/Medicaid,2024-05-10,2,9380,2024,Q2,2024 Q2
+P0210,80,76+,Male,Southeast,Cardiovascular,Inpatient,Medicare/Medicaid,2024-03-08,14,52590,2024,Q1,2024 Q1
+P0211,69,61-75,Male,Southwest,Mental Health,Emergency,Self-Pay,2022-02-10,3,3470,2022,Q1,2022 Q1
+P0212,73,61-75,Female,Northeast,Cardiovascular,Outpatient,Self-Pay,2024-02-19,0,11500,2024,Q1,2024 Q1
+P0213,33,31-45,Female,Southeast,Neurological,Outpatient,Private Insurance,2024-09-03,2,10100,2024,Q3,2024 Q3
+P0214,54,46-60,Male,Southeast,Cardiovascular,Inpatient,Self-Pay,2022-01-13,3,21800,2022,Q1,2022 Q1
+P0215,45,31-45,Female,Southwest,Mental Health,Emergency,Private Insurance,2023-12-22,5,2430,2023,Q4,2023 Q4
+P0216,19,18-30,Female,Southeast,Diabetes,Outpatient,Self-Pay,2023-09-04,2,2830,2023,Q3,2023 Q3
+P0217,44,31-45,Male,Midwest,Cardiovascular,Inpatient,Private Insurance,2024-03-09,17,43070,2024,Q1,2024 Q1
+P0218,86,76+,Male,Southwest,Orthopedic,Emergency,Medicare/Medicaid,2024-05-08,3,39850,2024,Q2,2024 Q2
+P0219,80,76+,Female,Southeast,Mental Health,Outpatient,Medicare/Medicaid,2023-03-28,0,3050,2023,Q1,2023 Q1
+P0220,74,61-75,Female,Southwest,Respiratory,Inpatient,Medicare/Medicaid,2024-09-26,21,8300,2024,Q3,2024 Q3
+P0221,56,46-60,Female,Southeast,Diabetes,Emergency,Private Insurance,2023-03-26,3,9330,2023,Q1,2023 Q1
+P0222,69,61-75,Male,Southwest,Oncology,Outpatient,Private Insurance,2023-07-13,0,30500,2023,Q3,2023 Q3
+P0223,40,31-45,Male,West,Diabetes,Emergency,Self-Pay,2024-06-11,2,11770,2024,Q2,2024 Q2
+P0224,49,46-60,Male,Northeast,Oncology,Inpatient,Medicare/Medicaid,2024-09-21,21,106800,2024,Q3,2024 Q3
+P0225,33,31-45,Male,Northeast,Cardiovascular,Outpatient,Medicare/Medicaid,2022-03-01,1,10810,2022,Q1,2022 Q1
+P0226,66,61-75,Male,Southeast,Diabetes,Outpatient,Private Insurance,2024-03-07,2,2850,2024,Q1,2024 Q1
+P0227,73,61-75,Male,Southwest,Mental Health,Inpatient,Medicare/Medicaid,2023-11-20,6,9460,2023,Q4,2023 Q4
+P0228,48,46-60,Female,Midwest,Neurological,Emergency,Medicare/Medicaid,2024-04-08,1,17670,2024,Q2,2024 Q2
+P0229,54,46-60,Female,Southwest,Orthopedic,Outpatient,Self-Pay,2022-12-05,2,8340,2022,Q4,2022 Q4
+P0230,58,46-60,Male,West,Neurological,Inpatient,Private Insurance,2024-08-15,3,29690,2024,Q3,2024 Q3
+P0231,60,46-60,Female,Northeast,Oncology,Outpatient,Private Insurance,2022-09-19,1,35060,2022,Q3,2022 Q3
+P0232,69,61-75,Male,West,Cardiovascular,Outpatient,Private Insurance,2024-12-29,1,35450,2024,Q4,2024 Q4
+P0233,90,76+,Male,Midwest,Respiratory,Inpatient,Medicare/Medicaid,2022-02-25,3,8350,2022,Q1,2022 Q1
+P0234,31,31-45,Male,West,Cardiovascular,Inpatient,Private Insurance,2024-03-17,20,53480,2024,Q1,2024 Q1
+P0235,55,46-60,Female,Southeast,Mental Health,Inpatient,Medicare/Medicaid,2022-02-25,13,7330,2022,Q1,2022 Q1
+P0236,51,46-60,Female,Southeast,Mental Health,Inpatient,Medicare/Medicaid,2022-06-21,6,4760,2022,Q2,2022 Q2
+P0237,83,76+,Female,Southeast,Cardiovascular,Inpatient,Private Insurance,2024-05-27,4,17440,2024,Q2,2024 Q2
+P0238,61,61-75,Male,Northeast,Cardiovascular,Outpatient,Private Insurance,2022-10-05,1,10620,2022,Q4,2022 Q4
+P0239,47,46-60,Female,Northeast,Orthopedic,Inpatient,Private Insurance,2024-08-03,12,43490,2024,Q3,2024 Q3
+P0240,75,61-75,Male,Northeast,Diabetes,Outpatient,Private Insurance,2023-01-08,2,4950,2023,Q1,2023 Q1
+P0241,51,46-60,Female,Southeast,Oncology,Outpatient,Self-Pay,2022-04-13,1,31090,2022,Q2,2022 Q2
+P0242,45,31-45,Female,Northeast,Cardiovascular,Outpatient,Medicare/Medicaid,2023-06-17,0,15730,2023,Q2,2023 Q2
+P0243,30,18-30,Male,Midwest,Cardiovascular,Outpatient,Medicare/Medicaid,2024-02-16,0,11520,2024,Q1,2024 Q1
+P0244,35,31-45,Female,West,Mental Health,Outpatient,Private Insurance,2023-11-02,0,3630,2023,Q4,2023 Q4
+P0245,64,61-75,Female,Southeast,Cardiovascular,Emergency,Private Insurance,2023-03-10,5,35060,2023,Q1,2023 Q1
+P0246,46,46-60,Male,Northeast,Oncology,Outpatient,Medicare/Medicaid,2024-07-20,1,28270,2024,Q3,2024 Q3
+P0247,21,18-30,Female,West,Cardiovascular,Outpatient,Medicare/Medicaid,2023-11-01,2,13880,2023,Q4,2023 Q4
+P0248,27,18-30,Male,West,Oncology,Emergency,Private Insurance,2023-11-23,5,133760,2023,Q4,2023 Q4
+P0249,19,18-30,Female,Southeast,Diabetes,Inpatient,Self-Pay,2024-02-16,10,4930,2024,Q1,2024 Q1
+P0250,32,31-45,Female,Northeast,Respiratory,Outpatient,Private Insurance,2023-07-24,0,11310,2023,Q3,2023 Q3
+P0251,57,46-60,Female,Midwest,Neurological,Inpatient,Medicare/Medicaid,2024-05-13,10,24660,2024,Q2,2024 Q2
+P0252,25,18-30,Female,Southeast,Respiratory,Outpatient,Private Insurance,2023-06-01,1,4440,2023,Q2,2023 Q2
+P0253,59,46-60,Female,Midwest,Mental Health,Inpatient,Medicare/Medicaid,2022-06-17,11,5190,2022,Q2,2022 Q2
+P0254,32,31-45,Male,Northeast,Cardiovascular,Emergency,Self-Pay,2024-08-21,3,21910,2024,Q3,2024 Q3
+P0255,30,18-30,Female,Southeast,Mental Health,Inpatient,Private Insurance,2022-02-09,5,6100,2022,Q1,2022 Q1
+P0256,39,31-45,Male,Midwest,Neurological,Outpatient,Private Insurance,2022-04-17,1,7560,2022,Q2,2022 Q2
+P0257,43,31-45,Female,Northeast,Cardiovascular,Inpatient,Private Insurance,2023-12-18,4,49820,2023,Q4,2023 Q4
+P0258,78,76+,Male,Southeast,Respiratory,Inpatient,Medicare/Medicaid,2023-04-05,6,8820,2023,Q2,2023 Q2
+P0259,78,76+,Male,Northeast,Neurological,Inpatient,Private Insurance,2022-05-21,9,43490,2022,Q2,2022 Q2
+P0260,28,18-30,Female,Midwest,Respiratory,Outpatient,Private Insurance,2022-03-24,2,9710,2022,Q1,2022 Q1
+P0261,68,61-75,Male,Southwest,Oncology,Outpatient,Medicare/Medicaid,2022-03-05,2,33620,2022,Q1,2022 Q1
+P0262,69,61-75,Female,Northeast,Orthopedic,Outpatient,Medicare/Medicaid,2023-05-22,2,16030,2023,Q2,2023 Q2
+P0263,48,46-60,Male,Southeast,Neurological,Outpatient,Medicare/Medicaid,2023-02-13,1,10730,2023,Q1,2023 Q1
+P0264,80,76+,Male,Northeast,Cardiovascular,Inpatient,Medicare/Medicaid,2022-02-11,19,75250,2022,Q1,2022 Q1
+P0265,54,46-60,Female,Northeast,Respiratory,Emergency,Medicare/Medicaid,2022-11-09,3,9860,2022,Q4,2022 Q4
+P0266,27,18-30,Male,Southwest,Mental Health,Inpatient,Private Insurance,2023-05-04,4,6250,2023,Q2,2023 Q2
+P0267,37,31-45,Male,Midwest,Oncology,Outpatient,Private Insurance,2022-09-16,1,19710,2022,Q3,2022 Q3
+P0268,34,31-45,Female,Northeast,Orthopedic,Outpatient,Self-Pay,2024-08-27,0,11460,2024,Q3,2024 Q3
+P0269,60,46-60,Male,Midwest,Neurological,Outpatient,Private Insurance,2022-08-23,1,7810,2022,Q3,2022 Q3
+P0270,39,31-45,Female,Northeast,Orthopedic,Inpatient,Private Insurance,2023-03-23,19,80600,2023,Q1,2023 Q1
+P0271,30,18-30,Male,Northeast,Orthopedic,Outpatient,Private Insurance,2024-08-10,0,28230,2024,Q3,2024 Q3
+P0272,57,46-60,Male,Northeast,Respiratory,Outpatient,Medicare/Medicaid,2023-06-09,1,3380,2023,Q2,2023 Q2
+P0273,29,18-30,Female,Southwest,Diabetes,Outpatient,Private Insurance,2024-01-26,1,3580,2024,Q1,2024 Q1
+P0274,79,76+,Male,Southeast,Orthopedic,Emergency,Private Insurance,2022-12-10,3,26380,2022,Q4,2022 Q4
+P0275,72,61-75,Male,Southeast,Oncology,Emergency,Private Insurance,2022-08-23,5,107580,2022,Q3,2022 Q3
+P0276,22,18-30,Male,Southeast,Mental Health,Emergency,Private Insurance,2022-12-02,4,5750,2022,Q4,2022 Q4
+P0277,82,76+,Male,Southeast,Oncology,Emergency,Self-Pay,2023-09-30,3,40500,2023,Q3,2023 Q3
+P0278,56,46-60,Female,Southeast,Mental Health,Outpatient,Medicare/Medicaid,2022-08-10,0,2640,2022,Q3,2022 Q3
+P0279,71,61-75,Male,Southwest,Mental Health,Outpatient,Medicare/Medicaid,2022-02-22,2,2550,2022,Q1,2022 Q1
+P0280,66,61-75,Female,Northeast,Respiratory,Emergency,Private Insurance,2023-10-01,2,12530,2023,Q4,2023 Q4
+P0281,68,61-75,Female,Southeast,Mental Health,Inpatient,Medicare/Medicaid,2024-02-08,17,5520,2024,Q1,2024 Q1
+P0282,26,18-30,Male,Southwest,Neurological,Outpatient,Private Insurance,2024-03-23,0,9280,2024,Q1,2024 Q1
+P0283,38,31-45,Female,Midwest,Respiratory,Outpatient,Medicare/Medicaid,2023-02-11,2,5740,2023,Q1,2023 Q1
+P0284,32,31-45,Male,Southwest,Oncology,Inpatient,Self-Pay,2022-06-05,19,57590,2022,Q2,2022 Q2
+P0285,34,31-45,Female,Northeast,Cardiovascular,Inpatient,Private Insurance,2023-05-13,12,24060,2023,Q2,2023 Q2
+P0286,34,31-45,Male,Midwest,Neurological,Outpatient,Medicare/Medicaid,2022-07-28,2,9450,2022,Q3,2022 Q3
+P0287,62,61-75,Female,Southwest,Diabetes,Emergency,Private Insurance,2023-09-10,2,8460,2023,Q3,2023 Q3
+P0288,81,76+,Female,Midwest,Mental Health,Inpatient,Medicare/Medicaid,2022-09-05,4,8230,2022,Q3,2022 Q3
+P0289,46,46-60,Male,Southeast,Diabetes,Emergency,Private Insurance,2022-03-26,4,9080,2022,Q1,2022 Q1
+P0290,70,61-75,Female,Southwest,Neurological,Inpatient,Private Insurance,2023-12-13,11,28800,2023,Q4,2023 Q4
+P0291,26,18-30,Female,Southeast,Cardiovascular,Outpatient,Private Insurance,2024-12-27,2,12050,2024,Q4,2024 Q4
+P0292,21,18-30,Male,Southeast,Respiratory,Inpatient,Medicare/Medicaid,2024-05-27,15,7980,2024,Q2,2024 Q2
+P0293,85,76+,Male,Midwest,Cardiovascular,Inpatient,Medicare/Medicaid,2024-01-29,5,32360,2024,Q1,2024 Q1
+P0294,49,46-60,Female,Southeast,Oncology,Outpatient,Private Insurance,2022-05-22,0,42980,2022,Q2,2022 Q2
+P0295,31,31-45,Female,Northeast,Diabetes,Outpatient,Private Insurance,2024-11-02,0,3420,2024,Q4,2024 Q4
+P0296,47,46-60,Female,Northeast,Oncology,Inpatient,Medicare/Medicaid,2023-11-30,3,102160,2023,Q4,2023 Q4
+P0297,57,46-60,Female,Southeast,Oncology,Inpatient,Self-Pay,2022-01-26,11,91790,2022,Q1,2022 Q1
+P0298,28,18-30,Female,Midwest,Mental Health,Emergency,Medicare/Medicaid,2024-05-10,4,6540,2024,Q2,2024 Q2
+P0299,46,46-60,Female,Midwest,Diabetes,Emergency,Private Insurance,2024-09-30,1,12490,2024,Q3,2024 Q3
+P0300,49,46-60,Male,Midwest,Diabetes,Inpatient,Private Insurance,2022-08-05,5,8140,2022,Q3,2022 Q3
+P0301,47,46-60,Male,Midwest,Orthopedic,Outpatient,Private Insurance,2024-06-06,0,6300,2024,Q2,2024 Q2
+P0302,45,31-45,Female,Southwest,Respiratory,Outpatient,Medicare/Medicaid,2024-01-12,2,4980,2024,Q1,2024 Q1
+P0303,46,46-60,Female,Southeast,Orthopedic,Outpatient,Medicare/Medicaid,2024-07-30,0,13970,2024,Q3,2024 Q3
+P0304,74,61-75,Male,Northeast,Orthopedic,Inpatient,Private Insurance,2022-11-10,14,64390,2022,Q4,2022 Q4
+P0305,81,76+,Male,Northeast,Cardiovascular,Inpatient,Self-Pay,2024-06-10,16,46590,2024,Q2,2024 Q2
+P0306,19,18-30,Female,Northeast,Cardiovascular,Emergency,Medicare/Medicaid,2022-12-27,3,38340,2022,Q4,2022 Q4
+P0307,69,61-75,Female,Southwest,Neurological,Outpatient,Medicare/Medicaid,2024-12-04,2,14500,2024,Q4,2024 Q4
+P0308,21,18-30,Male,Southwest,Respiratory,Emergency,Self-Pay,2023-07-08,5,6990,2023,Q3,2023 Q3
+P0309,50,46-60,Male,Northeast,Mental Health,Inpatient,Medicare/Medicaid,2024-09-17,15,5700,2024,Q3,2024 Q3
+P0310,56,46-60,Male,Northeast,Respiratory,Inpatient,Medicare/Medicaid,2024-08-10,20,13280,2024,Q3,2024 Q3
+P0311,53,46-60,Male,Southeast,Mental Health,Emergency,Self-Pay,2024-06-11,2,6120,2024,Q2,2024 Q2
+P0312,79,76+,Male,Southwest,Respiratory,Inpatient,Private Insurance,2023-07-04,15,15340,2023,Q3,2023 Q3
+P0313,54,46-60,Male,Midwest,Cardiovascular,Emergency,Private Insurance,2023-10-23,1,33490,2023,Q4,2023 Q4
+P0314,78,76+,Female,Midwest,Cardiovascular,Outpatient,Private Insurance,2023-05-18,1,10310,2023,Q2,2023 Q2
+P0315,72,61-75,Male,Northeast,Respiratory,Inpatient,Private Insurance,2022-06-27,21,11620,2022,Q2,2022 Q2
+P0316,45,31-45,Female,Southwest,Orthopedic,Inpatient,Private Insurance,2023-07-26,15,45160,2023,Q3,2023 Q3
+P0317,45,31-45,Female,Midwest,Diabetes,Outpatient,Private Insurance,2024-07-12,1,3120,2024,Q3,2024 Q3
+P0318,55,46-60,Male,Northeast,Oncology,Inpatient,Medicare/Medicaid,2023-05-15,3,85450,2023,Q2,2023 Q2
+P0319,40,31-45,Female,Southeast,Respiratory,Outpatient,Medicare/Medicaid,2024-08-09,2,4360,2024,Q3,2024 Q3
+P0320,68,61-75,Male,Southeast,Cardiovascular,Outpatient,Private Insurance,2024-02-16,1,16070,2024,Q1,2024 Q1
+P0321,79,76+,Female,Northeast,Cardiovascular,Outpatient,Medicare/Medicaid,2023-11-20,0,14180,2023,Q4,2023 Q4
+P0322,43,31-45,Male,Midwest,Respiratory,Inpatient,Medicare/Medicaid,2022-02-28,16,6680,2022,Q1,2022 Q1
+P0323,25,18-30,Female,West,Orthopedic,Inpatient,Medicare/Medicaid,2024-10-09,16,41510,2024,Q4,2024 Q4
+P0324,58,46-60,Female,Midwest,Mental Health,Inpatient,Self-Pay,2023-10-28,9,5690,2023,Q4,2023 Q4
+P0325,37,31-45,Male,West,Diabetes,Outpatient,Medicare/Medicaid,2023-01-08,1,6910,2023,Q1,2023 Q1
+P0326,49,46-60,Male,Southwest,Orthopedic,Outpatient,Self-Pay,2024-09-25,0,12170,2024,Q3,2024 Q3
+P0327,62,61-75,Female,West,Cardiovascular,Outpatient,Medicare/Medicaid,2023-03-11,2,24570,2023,Q1,2023 Q1
+P0328,47,46-60,Female,Southwest,Diabetes,Emergency,Private Insurance,2023-12-28,3,9610,2023,Q4,2023 Q4
+P0329,56,46-60,Male,Northeast,Diabetes,Outpatient,Private Insurance,2023-06-14,2,5270,2023,Q2,2023 Q2
+P0330,82,76+,Female,Southeast,Orthopedic,Outpatient,Self-Pay,2023-11-29,2,9330,2023,Q4,2023 Q4
+P0331,81,76+,Male,Northeast,Cardiovascular,Inpatient,Private Insurance,2023-07-27,13,59670,2023,Q3,2023 Q3
+P0332,52,46-60,Female,West,Orthopedic,Outpatient,Private Insurance,2023-07-20,0,33770,2023,Q3,2023 Q3
+P0333,67,61-75,Male,West,Orthopedic,Emergency,Medicare/Medicaid,2022-01-21,4,28190,2022,Q1,2022 Q1
+P0334,53,46-60,Female,West,Neurological,Inpatient,Private Insurance,2024-11-24,10,37510,2024,Q4,2024 Q4
+P0335,74,61-75,Male,Northeast,Neurological,Outpatient,Private Insurance,2023-01-27,0,11740,2023,Q1,2023 Q1
+P0336,29,18-30,Male,Northeast,Cardiovascular,Emergency,Private Insurance,2022-06-25,1,28940,2022,Q2,2022 Q2
+P0337,31,31-45,Male,Midwest,Neurological,Outpatient,Private Insurance,2023-05-10,1,17110,2023,Q2,2023 Q2
+P0338,56,46-60,Male,Southeast,Cardiovascular,Outpatient,Private Insurance,2024-04-12,0,13320,2024,Q2,2024 Q2
+P0339,71,61-75,Female,Southwest,Neurological,Inpatient,Private Insurance,2024-09-27,8,21970,2024,Q3,2024 Q3
+P0340,56,46-60,Male,West,Diabetes,Inpatient,Private Insurance,2023-05-08,21,20910,2023,Q2,2023 Q2
+P0341,62,61-75,Female,West,Respiratory,Outpatient,Private Insurance,2024-09-02,0,7190,2024,Q3,2024 Q3
+P0342,61,61-75,Male,Southwest,Cardiovascular,Outpatient,Private Insurance,2024-10-02,0,16170,2024,Q4,2024 Q4
+P0343,67,61-75,Male,Midwest,Diabetes,Outpatient,Medicare/Medicaid,2024-07-06,1,7120,2024,Q3,2024 Q3
+P0344,57,46-60,Male,Southeast,Respiratory,Inpatient,Medicare/Medicaid,2022-02-05,9,11670,2022,Q1,2022 Q1
+P0345,36,31-45,Male,Northeast,Cardiovascular,Inpatient,Self-Pay,2022-07-10,6,27640,2022,Q3,2022 Q3
+P0346,30,18-30,Male,West,Diabetes,Inpatient,Private Insurance,2023-08-26,20,8560,2023,Q3,2023 Q3
+P0347,74,61-75,Male,Midwest,Orthopedic,Outpatient,Private Insurance,2023-03-30,0,11290,2023,Q1,2023 Q1
+P0348,32,31-45,Female,Midwest,Oncology,Outpatient,Private Insurance,2024-04-08,0,48490,2024,Q2,2024 Q2
+P0349,34,31-45,Male,Northeast,Oncology,Inpatient,Private Insurance,2023-05-14,19,99140,2023,Q2,2023 Q2
+P0350,34,31-45,Female,Southwest,Orthopedic,Inpatient,Private Insurance,2023-09-20,8,17410,2023,Q3,2023 Q3
+P0351,49,46-60,Female,Southwest,Diabetes,Outpatient,Medicare/Medicaid,2024-01-26,2,3860,2024,Q1,2024 Q1
+P0352,39,31-45,Male,Midwest,Neurological,Outpatient,Self-Pay,2024-08-27,0,9960,2024,Q3,2024 Q3
+P0353,38,31-45,Male,West,Orthopedic,Inpatient,Self-Pay,2024-12-23,9,50050,2024,Q4,2024 Q4
+P0354,63,61-75,Female,Southwest,Mental Health,Inpatient,Medicare/Medicaid,2023-12-06,12,6230,2023,Q4,2023 Q4
+P0355,67,61-75,Female,Midwest,Cardiovascular,Outpatient,Private Insurance,2024-05-21,0,9820,2024,Q2,2024 Q2
+P0356,48,46-60,Female,Northeast,Orthopedic,Outpatient,Self-Pay,2023-11-09,2,10130,2023,Q4,2023 Q4
+P0357,35,31-45,Male,Southwest,Oncology,Outpatient,Self-Pay,2023-12-22,0,22760,2023,Q4,2023 Q4
+P0358,38,31-45,Female,Midwest,Orthopedic,Outpatient,Private Insurance,2024-07-18,1,5880,2024,Q3,2024 Q3
+P0359,34,31-45,Female,Northeast,Mental Health,Emergency,Self-Pay,2023-07-09,2,7000,2023,Q3,2023 Q3
+P0360,74,61-75,Female,Northeast,Cardiovascular,Inpatient,Medicare/Medicaid,2023-09-20,6,61980,2023,Q3,2023 Q3
+P0361,19,18-30,Female,Northeast,Oncology,Outpatient,Self-Pay,2023-05-30,2,17650,2023,Q2,2023 Q2
+P0362,25,18-30,Male,Southeast,Diabetes,Inpatient,Private Insurance,2023-04-18,10,15780,2023,Q2,2023 Q2
+P0363,43,31-45,Male,Northeast,Orthopedic,Outpatient,Medicare/Medicaid,2022-09-05,0,14660,2022,Q3,2022 Q3
+P0364,59,46-60,Female,West,Cardiovascular,Inpatient,Private Insurance,2023-01-30,5,82520,2023,Q1,2023 Q1
+P0365,44,31-45,Female,West,Respiratory,Emergency,Private Insurance,2023-10-09,1,13840,2023,Q4,2023 Q4
+P0366,84,76+,Male,West,Orthopedic,Inpatient,Private Insurance,2022-09-02,6,56310,2022,Q3,2022 Q3
+P0367,19,18-30,Male,Southwest,Orthopedic,Outpatient,Medicare/Medicaid,2023-01-15,0,16550,2023,Q1,2023 Q1
+P0368,46,46-60,Male,Southeast,Mental Health,Inpatient,Private Insurance,2023-01-28,13,5370,2023,Q1,2023 Q1
+P0369,28,18-30,Male,Northeast,Mental Health,Outpatient,Self-Pay,2023-03-20,0,3890,2023,Q1,2023 Q1
+P0370,39,31-45,Female,Midwest,Cardiovascular,Inpatient,Private Insurance,2024-09-18,20,21230,2024,Q3,2024 Q3
+P0371,89,76+,Female,West,Cardiovascular,Inpatient,Private Insurance,2023-07-21,12,46690,2023,Q3,2023 Q3
+P0372,31,31-45,Male,Midwest,Diabetes,Outpatient,Medicare/Medicaid,2024-12-10,0,4540,2024,Q4,2024 Q4
+P0373,77,76+,Male,Southwest,Orthopedic,Outpatient,Private Insurance,2023-08-03,0,12160,2023,Q3,2023 Q3
+P0374,60,46-60,Male,Southwest,Oncology,Inpatient,Self-Pay,2022-07-25,10,98920,2022,Q3,2022 Q3
+P0375,58,46-60,Male,Southwest,Orthopedic,Outpatient,Private Insurance,2023-02-02,0,23510,2023,Q1,2023 Q1
+P0376,74,61-75,Female,Northeast,Cardiovascular,Emergency,Medicare/Medicaid,2023-08-30,2,45280,2023,Q3,2023 Q3
+P0377,64,61-75,Female,Midwest,Oncology,Inpatient,Private Insurance,2023-04-11,15,40920,2023,Q2,2023 Q2
+P0378,33,31-45,Female,Northeast,Cardiovascular,Outpatient,Private Insurance,2024-01-10,2,15890,2024,Q1,2024 Q1
+P0379,67,61-75,Male,West,Diabetes,Outpatient,Private Insurance,2023-01-03,0,9270,2023,Q1,2023 Q1
+P0380,53,46-60,Female,Northeast,Diabetes,Inpatient,Medicare/Medicaid,2023-09-12,4,7950,2023,Q3,2023 Q3
+P0381,83,76+,Female,Northeast,Cardiovascular,Outpatient,Self-Pay,2022-01-29,1,15080,2022,Q1,2022 Q1
+P0382,34,31-45,Female,Midwest,Diabetes,Outpatient,Private Insurance,2024-12-29,1,4780,2024,Q4,2024 Q4
+P0383,24,18-30,Male,West,Oncology,Outpatient,Private Insurance,2022-09-17,1,34350,2022,Q3,2022 Q3
+P0384,45,31-45,Male,Southeast,Mental Health,Outpatient,Private Insurance,2023-07-16,2,3610,2023,Q3,2023 Q3
+P0385,31,31-45,Male,Midwest,Cardiovascular,Inpatient,Medicare/Medicaid,2022-04-04,20,34580,2022,Q2,2022 Q2
+P0386,48,46-60,Male,West,Diabetes,Inpatient,Medicare/Medicaid,2022-04-22,5,21310,2022,Q2,2022 Q2
+P0387,82,76+,Male,Southeast,Cardiovascular,Inpatient,Medicare/Medicaid,2023-08-22,16,23050,2023,Q3,2023 Q3
+P0388,46,46-60,Male,West,Respiratory,Outpatient,Private Insurance,2022-09-16,2,6890,2022,Q3,2022 Q3
+P0389,37,31-45,Female,Northeast,Respiratory,Emergency,Private Insurance,2024-10-02,2,5590,2024,Q4,2024 Q4
+P0390,50,46-60,Female,West,Cardiovascular,Inpatient,Medicare/Medicaid,2022-07-30,21,24220,2022,Q3,2022 Q3
+P0391,90,76+,Male,Southeast,Mental Health,Inpatient,Medicare/Medicaid,2022-01-26,3,7440,2022,Q1,2022 Q1
+P0392,43,31-45,Male,Midwest,Orthopedic,Emergency,Private Insurance,2023-08-06,5,36740,2023,Q3,2023 Q3
+P0393,30,18-30,Female,Midwest,Orthopedic,Inpatient,Medicare/Medicaid,2024-08-19,11,34310,2024,Q3,2024 Q3
+P0394,68,61-75,Female,Northeast,Neurological,Emergency,Private Insurance,2024-09-07,4,23710,2024,Q3,2024 Q3
+P0395,65,61-75,Female,Southwest,Neurological,Outpatient,Self-Pay,2024-06-21,2,8000,2024,Q2,2024 Q2
+P0396,37,31-45,Female,Midwest,Cardiovascular,Emergency,Private Insurance,2023-11-29,1,17990,2023,Q4,2023 Q4
+P0397,87,76+,Female,Midwest,Orthopedic,Emergency,Self-Pay,2023-01-13,1,17810,2023,Q1,2023 Q1
+P0398,42,31-45,Female,Southeast,Mental Health,Emergency,Medicare/Medicaid,2022-04-16,4,6530,2022,Q2,2022 Q2
+P0399,73,61-75,Male,Southwest,Cardiovascular,Outpatient,Medicare/Medicaid,2023-06-02,1,12490,2023,Q2,2023 Q2
+P0400,26,18-30,Male,Northeast,Diabetes,Outpatient,Medicare/Medicaid,2024-09-05,1,6250,2024,Q3,2024 Q3
+P0401,71,61-75,Male,Northeast,Oncology,Inpatient,Medicare/Medicaid,2022-08-22,5,109630,2022,Q3,2022 Q3
+P0402,72,61-75,Male,Southeast,Orthopedic,Outpatient,Medicare/Medicaid,2022-05-14,1,13750,2022,Q2,2022 Q2
+P0403,53,46-60,Male,Midwest,Mental Health,Outpatient,Private Insurance,2024-03-31,2,3580,2024,Q1,2024 Q1
+P0404,63,61-75,Female,Southwest,Respiratory,Emergency,Medicare/Medicaid,2024-10-04,4,8070,2024,Q4,2024 Q4
+P0405,49,46-60,Female,Midwest,Diabetes,Outpatient,Medicare/Medicaid,2022-06-01,0,4760,2022,Q2,2022 Q2
+P0406,80,76+,Female,Midwest,Respiratory,Outpatient,Private Insurance,2022-04-20,0,3340,2022,Q2,2022 Q2
+P0407,79,76+,Male,Southeast,Cardiovascular,Inpatient,Medicare/Medicaid,2022-11-07,12,36400,2022,Q4,2022 Q4
+P0408,61,61-75,Female,Southeast,Cardiovascular,Outpatient,Medicare/Medicaid,2022-11-02,2,9820,2022,Q4,2022 Q4
+P0409,40,31-45,Female,Southwest,Mental Health,Inpatient,Private Insurance,2023-09-15,6,6080,2023,Q3,2023 Q3
+P0410,72,61-75,Male,Northeast,Neurological,Inpatient,Private Insurance,2022-06-24,4,31460,2022,Q2,2022 Q2
+P0411,54,46-60,Female,Northeast,Neurological,Inpatient,Self-Pay,2023-05-24,6,12130,2023,Q2,2023 Q2
+P0412,76,76+,Male,West,Respiratory,Emergency,Private Insurance,2022-08-31,3,12320,2022,Q3,2022 Q3
+P0413,42,31-45,Male,Northeast,Respiratory,Inpatient,Private Insurance,2024-05-02,21,7270,2024,Q2,2024 Q2
+P0414,36,31-45,Female,Midwest,Diabetes,Emergency,Medicare/Medicaid,2023-04-08,5,10380,2023,Q2,2023 Q2
+P0415,46,46-60,Male,Northeast,Neurological,Outpatient,Private Insurance,2024-12-06,2,16760,2024,Q4,2024 Q4
+P0416,18,18-30,Male,Southeast,Oncology,Emergency,Medicare/Medicaid,2024-02-19,3,48760,2024,Q1,2024 Q1
+P0417,40,31-45,Female,Southwest,Orthopedic,Outpatient,Medicare/Medicaid,2024-07-11,1,16880,2024,Q3,2024 Q3
+P0418,83,76+,Female,Northeast,Respiratory,Inpatient,Medicare/Medicaid,2024-06-25,21,17460,2024,Q2,2024 Q2
+P0419,54,46-60,Male,West,Mental Health,Inpatient,Self-Pay,2023-09-01,18,12430,2023,Q3,2023 Q3
+P0420,60,46-60,Male,Southeast,Oncology,Outpatient,Medicare/Medicaid,2024-05-28,1,34040,2024,Q2,2024 Q2
+P0421,44,31-45,Male,West,Orthopedic,Outpatient,Private Insurance,2023-09-18,1,26450,2023,Q3,2023 Q3
+P0422,54,46-60,Female,Midwest,Orthopedic,Outpatient,Private Insurance,2022-05-04,2,9530,2022,Q2,2022 Q2
+P0423,78,76+,Male,Midwest,Cardiovascular,Outpatient,Medicare/Medicaid,2022-07-23,2,12330,2022,Q3,2022 Q3
+P0424,46,46-60,Male,West,Mental Health,Emergency,Medicare/Medicaid,2023-03-02,4,7950,2023,Q1,2023 Q1
+P0425,54,46-60,Female,Midwest,Mental Health,Outpatient,Private Insurance,2023-03-09,0,2030,2023,Q1,2023 Q1
+P0426,32,31-45,Female,West,Oncology,Inpatient,Private Insurance,2023-06-26,5,139560,2023,Q2,2023 Q2
+P0427,89,76+,Male,Northeast,Cardiovascular,Outpatient,Private Insurance,2022-06-16,2,17170,2022,Q2,2022 Q2
+P0428,20,18-30,Female,West,Orthopedic,Emergency,Private Insurance,2022-11-18,5,64220,2022,Q4,2022 Q4
+P0429,47,46-60,Female,Southwest,Orthopedic,Inpatient,Private Insurance,2023-05-07,8,41840,2023,Q2,2023 Q2
+P0430,40,31-45,Male,Midwest,Orthopedic,Outpatient,Private Insurance,2022-12-22,1,14980,2022,Q4,2022 Q4
+P0431,32,31-45,Male,Southeast,Diabetes,Outpatient,Private Insurance,2022-06-03,1,4890,2022,Q2,2022 Q2
+P0432,56,46-60,Female,West,Respiratory,Outpatient,Private Insurance,2022-11-17,0,16750,2022,Q4,2022 Q4
+P0433,21,18-30,Male,Southeast,Diabetes,Outpatient,Private Insurance,2022-01-06,1,2060,2022,Q1,2022 Q1
+P0434,52,46-60,Female,Midwest,Orthopedic,Inpatient,Private Insurance,2024-04-16,12,24680,2024,Q2,2024 Q2
+P0435,47,46-60,Male,West,Neurological,Emergency,Private Insurance,2024-07-11,4,54680,2024,Q3,2024 Q3
+P0436,27,18-30,Male,Southeast,Neurological,Outpatient,Medicare/Medicaid,2024-08-20,1,8310,2024,Q3,2024 Q3
+P0437,34,31-45,Male,Southwest,Orthopedic,Inpatient,Private Insurance,2023-08-20,15,51990,2023,Q3,2023 Q3
+P0438,85,76+,Male,Southwest,Diabetes,Outpatient,Self-Pay,2022-03-08,2,3830,2022,Q1,2022 Q1
+P0439,55,46-60,Male,West,Diabetes,Inpatient,Private Insurance,2023-04-20,5,35460,2023,Q2,2023 Q2
+P0440,46,46-60,Male,Southeast,Diabetes,Outpatient,Self-Pay,2023-08-14,1,2030,2023,Q3,2023 Q3
+P0441,27,18-30,Female,West,Cardiovascular,Inpatient,Medicare/Medicaid,2023-08-03,15,82420,2023,Q3,2023 Q3
+P0442,47,46-60,Female,Southeast,Cardiovascular,Outpatient,Medicare/Medicaid,2024-07-18,1,22720,2024,Q3,2024 Q3
+P0443,37,31-45,Female,Southwest,Respiratory,Inpatient,Private Insurance,2022-05-26,10,8550,2022,Q2,2022 Q2
+P0444,71,61-75,Female,Northeast,Orthopedic,Outpatient,Medicare/Medicaid,2023-04-24,1,19980,2023,Q2,2023 Q2
+P0445,70,61-75,Male,Southeast,Diabetes,Inpatient,Private Insurance,2023-06-26,6,7280,2023,Q2,2023 Q2
+P0446,70,61-75,Female,Midwest,Cardiovascular,Inpatient,Private Insurance,2023-02-10,17,31760,2023,Q1,2023 Q1
+P0447,84,76+,Male,Northeast,Cardiovascular,Inpatient,Private Insurance,2024-05-20,4,36490,2024,Q2,2024 Q2
+P0448,51,46-60,Female,Southeast,Diabetes,Outpatient,Private Insurance,2022-08-24,0,1680,2022,Q3,2022 Q3
+P0449,45,31-45,Female,Midwest,Mental Health,Outpatient,Private Insurance,2023-04-06,0,3040,2023,Q2,2023 Q2
+P0450,65,61-75,Female,Southeast,Diabetes,Outpatient,Self-Pay,2022-11-02,0,3150,2022,Q4,2022 Q4
+P0451,49,46-60,Female,Southwest,Cardiovascular,Outpatient,Private Insurance,2023-06-29,1,24400,2023,Q2,2023 Q2
+P0452,71,61-75,Female,West,Neurological,Outpatient,Medicare/Medicaid,2022-10-19,0,19350,2022,Q4,2022 Q4
+P0453,42,31-45,Male,Southeast,Cardiovascular,Emergency,Private Insurance,2022-05-27,3,57360,2022,Q2,2022 Q2
+P0454,51,46-60,Male,West,Respiratory,Outpatient,Medicare/Medicaid,2022-05-03,0,6790,2022,Q2,2022 Q2
+P0455,21,18-30,Female,Midwest,Orthopedic,Emergency,Medicare/Medicaid,2022-12-06,5,24090,2022,Q4,2022 Q4
+P0456,35,31-45,Male,Northeast,Oncology,Outpatient,Private Insurance,2023-09-22,0,36560,2023,Q3,2023 Q3
+P0457,52,46-60,Female,Midwest,Orthopedic,Outpatient,Self-Pay,2023-08-15,2,7900,2023,Q3,2023 Q3
+P0458,33,31-45,Female,Northeast,Neurological,Outpatient,Private Insurance,2024-06-18,2,5360,2024,Q2,2024 Q2
+P0459,56,46-60,Male,Midwest,Diabetes,Emergency,Private Insurance,2022-09-12,5,7310,2022,Q3,2022 Q3
+P0460,41,31-45,Female,Northeast,Neurological,Emergency,Self-Pay,2024-08-17,3,9050,2024,Q3,2024 Q3
+P0461,65,61-75,Female,Northeast,Cardiovascular,Emergency,Private Insurance,2023-09-15,1,37220,2023,Q3,2023 Q3
+P0462,38,31-45,Female,West,Oncology,Outpatient,Private Insurance,2024-04-04,1,34010,2024,Q2,2024 Q2
+P0463,36,31-45,Female,West,Diabetes,Outpatient,Private Insurance,2023-07-12,1,4730,2023,Q3,2023 Q3
+P0464,60,46-60,Female,Southeast,Neurological,Inpatient,Medicare/Medicaid,2024-10-21,15,19510,2024,Q4,2024 Q4
+P0465,73,61-75,Female,Southwest,Oncology,Outpatient,Private Insurance,2024-10-08,2,34700,2024,Q4,2024 Q4
+P0466,19,18-30,Female,Southwest,Oncology,Outpatient,Private Insurance,2024-06-15,0,37370,2024,Q2,2024 Q2
+P0467,46,46-60,Male,West,Respiratory,Outpatient,Medicare/Medicaid,2022-06-14,1,9560,2022,Q2,2022 Q2
+P0468,25,18-30,Male,Southeast,Orthopedic,Outpatient,Medicare/Medicaid,2022-03-23,2,10050,2022,Q1,2022 Q1
+P0469,85,76+,Female,Midwest,Mental Health,Inpatient,Medicare/Medicaid,2024-06-03,11,8140,2024,Q2,2024 Q2
+P0470,40,31-45,Male,Northeast,Cardiovascular,Outpatient,Medicare/Medicaid,2023-10-23,1,39550,2023,Q4,2023 Q4
+P0471,47,46-60,Female,Southwest,Respiratory,Outpatient,Private Insurance,2023-05-28,0,5300,2023,Q2,2023 Q2
+P0472,47,46-60,Female,Midwest,Neurological,Inpatient,Medicare/Medicaid,2022-02-22,20,22520,2022,Q1,2022 Q1
+P0473,39,31-45,Male,Northeast,Cardiovascular,Emergency,Medicare/Medicaid,2022-07-07,5,24190,2022,Q3,2022 Q3
+P0474,49,46-60,Female,Southeast,Diabetes,Emergency,Private Insurance,2023-04-14,2,7590,2023,Q2,2023 Q2
+P0475,69,61-75,Female,Southeast,Orthopedic,Emergency,Private Insurance,2022-02-12,2,18850,2022,Q1,2022 Q1
+P0476,65,61-75,Female,Midwest,Diabetes,Outpatient,Medicare/Medicaid,2023-07-06,2,4150,2023,Q3,2023 Q3
+P0477,63,61-75,Male,Southeast,Diabetes,Inpatient,Medicare/Medicaid,2022-03-24,17,10590,2022,Q1,2022 Q1
+P0478,60,46-60,Male,Southwest,Oncology,Inpatient,Private Insurance,2022-12-25,9,45920,2022,Q4,2022 Q4
+P0479,36,31-45,Male,Southeast,Diabetes,Emergency,Medicare/Medicaid,2024-08-21,1,8070,2024,Q3,2024 Q3
+P0480,90,76+,Female,Northeast,Orthopedic,Outpatient,Private Insurance,2024-11-28,1,22140,2024,Q4,2024 Q4
+P0481,32,31-45,Male,Northeast,Orthopedic,Outpatient,Private Insurance,2024-06-24,2,13210,2024,Q2,2024 Q2
+P0482,60,46-60,Female,Northeast,Diabetes,Outpatient,Private Insurance,2023-07-24,1,3820,2023,Q3,2023 Q3
+P0483,34,31-45,Male,Southeast,Cardiovascular,Inpatient,Medicare/Medicaid,2023-01-07,5,19960,2023,Q1,2023 Q1
+P0484,36,31-45,Male,Northeast,Respiratory,Outpatient,Private Insurance,2024-06-11,1,2530,2024,Q2,2024 Q2
+P0485,22,18-30,Female,Southeast,Mental Health,Inpatient,Private Insurance,2024-10-04,20,9470,2024,Q4,2024 Q4
+P0486,63,61-75,Female,West,Cardiovascular,Inpatient,Medicare/Medicaid,2022-07-06,9,50440,2022,Q3,2022 Q3
+P0487,53,46-60,Male,Midwest,Diabetes,Emergency,Private Insurance,2024-08-20,4,10350,2024,Q3,2024 Q3
+P0488,59,46-60,Male,Southeast,Mental Health,Outpatient,Medicare/Medicaid,2023-12-14,2,4610,2023,Q4,2023 Q4
+P0489,69,61-75,Male,Northeast,Neurological,Outpatient,Medicare/Medicaid,2024-04-16,2,16020,2024,Q2,2024 Q2
+P0490,57,46-60,Female,Midwest,Neurological,Outpatient,Medicare/Medicaid,2023-11-14,2,7560,2023,Q4,2023 Q4
+P0491,35,31-45,Female,Northeast,Respiratory,Outpatient,Medicare/Medicaid,2023-10-20,2,5110,2023,Q4,2023 Q4
+P0492,85,76+,Male,Midwest,Neurological,Inpatient,Medicare/Medicaid,2022-08-03,19,19340,2022,Q3,2022 Q3
+P0493,88,76+,Male,West,Oncology,Outpatient,Medicare/Medicaid,2022-11-26,0,40970,2022,Q4,2022 Q4
+P0494,71,61-75,Male,Northeast,Oncology,Inpatient,Medicare/Medicaid,2023-11-07,21,115410,2023,Q4,2023 Q4
+P0495,84,76+,Female,West,Mental Health,Inpatient,Private Insurance,2024-04-23,10,8790,2024,Q2,2024 Q2
+P0496,46,46-60,Female,Northeast,Respiratory,Outpatient,Private Insurance,2024-10-11,0,2240,2024,Q4,2024 Q4
+P0497,56,46-60,Male,Southwest,Neurological,Outpatient,Private Insurance,2023-08-14,0,8130,2023,Q3,2023 Q3
+P0498,44,31-45,Female,Southeast,Cardiovascular,Inpatient,Private Insurance,2024-03-31,10,29030,2024,Q1,2024 Q1
+P0499,26,18-30,Male,Midwest,Diabetes,Outpatient,Medicare/Medicaid,2022-03-17,2,6440,2022,Q1,2022 Q1
+P0500,22,18-30,Male,Northeast,Cardiovascular,Outpatient,Private Insurance,2024-07-20,1,12810,2024,Q3,2024 Q3

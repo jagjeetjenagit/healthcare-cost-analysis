@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Healthcare Cost Analysis Dashboard</title>
 <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <style>
   :root {
     --bg: #f0f4f8;
@@ -141,17 +142,17 @@
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Avg Cost / Patient</div>
-      <div class="kpi-value">$22,331</div>
+      <div class="kpi-value" id="kpi-avg">—</div>
       <div class="kpi-sub">Across all regions &amp; diagnoses</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Total Expenditure</div>
-      <div class="kpi-value">$11.2M</div>
+      <div class="kpi-value" id="kpi-total">—</div>
       <div class="kpi-sub">Combined cost pool</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">Highest Single Case</div>
-      <div class="kpi-value">$140K</div>
+      <div class="kpi-value" id="kpi-max">—</div>
       <div class="kpi-sub">Max case cost recorded</div>
     </div>
   </div>
@@ -159,7 +160,7 @@
   <!-- ROW 1: Regional + Diagnosis -->
   <div class="chart-grid-2">
     <div class="chart-card">
-      <div class="chart-title">Average Cost by Region <span>vs national avg $22,331</span></div>
+      <div class="chart-title">Average Cost by Region <span id="regional-subtitle">loading…</span></div>
       <div id="chartRegional" style="height:300px;"></div>
     </div>
     <div class="chart-card">
@@ -286,157 +287,197 @@
 </div>
 
 <script>
-// ── DATA ─────────────────────────────────────────────────────────────────────
-const regional  = {regions:["West","Northeast","Southwest","Southeast","Midwest"],avg_cost:[29780,26269,21315,17339,16550],patients:[96,122,74,104,104]};
-const diagnosis = {cats:["Oncology","Cardiovascular","Orthopedic","Neurological","Respiratory","Diabetes","Mental Health"],avg_cost:[58609,29491,27319,20175,9106,8236,5850],count:[48,114,82,60,65,76,55]};
-const insurance = {types:["Private Insurance","Medicare/Medicaid","Self-Pay"],avg_cost:[23614,21943,18441],patients:[246,192,62]};
-const treatment = {types:["Inpatient","Emergency","Outpatient"],avg_cost:[32738,24939,13115],count:[183,86,231]};
-const quarterly = {periods:["2022 Q1","2022 Q2","2022 Q3","2022 Q4","2023 Q1","2023 Q2","2023 Q3","2023 Q4","2024 Q1","2024 Q2","2024 Q3","2024 Q4"],avg_cost:[19943,18438,28136,21714,18460,25562,23598,28166,24211,18020,21461,19324],patients:[38,37,40,36,39,51,54,43,30,54,48,30]};
-const age       = {groups:["18-30","31-45","46-60","61-75","76+"],avg_cost:[22839,22394,21471,22991,22230]};
-const heatmap   = {regions:["Midwest","Northeast","Southeast","Southwest","West"],diagnoses:["Cardiovascular","Diabetes","Mental Health","Neurological","Oncology","Orthopedic","Respiratory"],values:[[24218,6649,5316,16224,46728,21056,5669],[29213,5316,7792,22762,65820,27689,10259],[26203,6995,5533,16269,59006,16469,6691],[24962,5647,5207,16611,47602,26520,9209],[42360,14494,6751,29057,70130,40559,11260]]};
+// ── LOAD CSV → BUILD DASHBOARD ───────────────────────────────────────────────
+Papa.parse('healthcare_patients.csv', {
+  download: true, header: true, dynamicTyping: true,
+  complete: ({ data }) => buildDashboard(data.filter(r => r.Patient_ID))
+});
 
-// ── LAYOUT DEFAULTS ───────────────────────────────────────────────────────────
-const cfg  = {responsive:true, displayModeBar:false};
-const font = {family:"Segoe UI, Arial, sans-serif", size:12, color:"#1e293b"};
-const baseLayout = {
-  margin:{t:10,b:60,l:60,r:20},
-  paper_bgcolor:"#fff", plot_bgcolor:"#fff",
-  font: font,
-  xaxis:{showgrid:false, tickfont:{size:11}},
-  yaxis:{showgrid:true, gridcolor:"#f1f5f9", tickfont:{size:11}},
-  hoverlabel:{bgcolor:"#1a56db", font:{color:"white", size:12}}
-};
-
-// ── 1. REGIONAL BAR ───────────────────────────────────────────────────────────
-const regColors = regional.avg_cost.map(v => v > 22331 ? '#1a56db' : '#93b4f7');
-Plotly.newPlot('chartRegional', [{
-  type:'bar', x: regional.avg_cost, y: regional.regions, orientation:'h',
-  marker:{color: regColors, line:{width:0}},
-  text: regional.avg_cost.map(v=>'$'+v.toLocaleString()),
-  textposition:'outside', textfont:{size:11, color:'#1e293b'},
-  hovertemplate:'<b>%{y}</b><br>Avg Cost: $%{x:,.0f}<extra></extra>',
-  customdata: regional.patients,
-}], {
-  ...baseLayout,
-  margin:{t:10,b:40,l:80,r:90},
-  xaxis:{...baseLayout.xaxis, tickformat:'$,.0f', showgrid:true, gridcolor:'#f1f5f9'},
-  yaxis:{...baseLayout.yaxis, showgrid:false},
-  shapes:[{type:'line', x0:22331, x1:22331, y0:-0.5, y1:4.5,
-           line:{color:'#dc2626', width:2, dash:'dot'}}],
-  annotations:[{x:22331, y:4.7, text:'Nat. Avg', showarrow:false,
-                font:{size:10, color:'#dc2626'}, xanchor:'center'}]
-}, cfg);
-
-// ── 2. DIAGNOSIS BAR ──────────────────────────────────────────────────────────
-const diagColors = ['#dc2626','#ea580c','#d97706','#65a30d','#0891b2','#1a56db','#7c3aed'];
-Plotly.newPlot('chartDiagnosis', [{
-  type:'bar', x: diagnosis.cats, y: diagnosis.avg_cost,
-  marker:{color: diagColors, line:{width:0}},
-  text: diagnosis.avg_cost.map(v=>'$'+(v/1000).toFixed(0)+'K'),
-  textposition:'outside', textfont:{size:10},
-  hovertemplate:'<b>%{x}</b><br>Avg: $%{y:,.0f}<br>Cases: %{customdata}<extra></extra>',
-  customdata: diagnosis.count
-}], {
-  ...baseLayout,
-  margin:{t:10,b:80,l:65,r:20},
-  yaxis:{...baseLayout.yaxis, tickformat:'$,.0f'},
-  xaxis:{...baseLayout.xaxis, tickangle:-20}
-}, cfg);
-
-// ── 3. TREATMENT DONUT ────────────────────────────────────────────────────────
-Plotly.newPlot('chartTreatment', [{
-  type:'pie', labels: treatment.types, values: treatment.count,
-  hole:0.52,
-  marker:{colors:['#1a56db','#f59e0b','#10b981'], line:{color:'#fff', width:2}},
-  textinfo:'label+percent',
-  hovertemplate:'<b>%{label}</b><br>Cases: %{value}<br>Avg Cost: $%{customdata:,.0f}<extra></extra>',
-  customdata: treatment.avg_cost,
-  textfont:{size:11}
-}], {
-  ...baseLayout,
-  margin:{t:10,b:30,l:10,r:10},
-  showlegend:false,
-  annotations:[{text:'Treatment<br>Mix', x:0.5, y:0.5, showarrow:false,
-                font:{size:12, color:'#64748b'}, xanchor:'center'}]
-}, cfg);
-
-// ── 4. INSURANCE BAR ─────────────────────────────────────────────────────────
-Plotly.newPlot('chartInsurance', [{
-  type:'bar', x: insurance.types, y: insurance.avg_cost,
-  marker:{color:['#1a56db','#10b981','#f59e0b'], line:{width:0}},
-  text: insurance.avg_cost.map(v=>'$'+v.toLocaleString()),
-  textposition:'outside', textfont:{size:11},
-  hovertemplate:'<b>%{x}</b><br>Avg Cost: $%{y:,.0f}<br>Patients: %{customdata}<extra></extra>',
-  customdata: insurance.patients
-}], {
-  ...baseLayout,
-  margin:{t:10,b:80,l:65,r:20},
-  yaxis:{...baseLayout.yaxis, tickformat:'$,.0f'},
-  xaxis:{...baseLayout.xaxis, tickangle:-10}
-}, cfg);
-
-// ── 5. AGE GROUP BAR ─────────────────────────────────────────────────────────
-Plotly.newPlot('chartAge', [{
-  type:'bar', x: age.groups, y: age.avg_cost,
-  marker:{color:['#bfdbfe','#93c5fd','#60a5fa','#2563eb','#1e40af'], line:{width:0}},
-  text: age.avg_cost.map(v=>'$'+(v/1000).toFixed(0)+'K'),
-  textposition:'outside', textfont:{size:11},
-  hovertemplate:'<b>Age %{x}</b><br>Avg Cost: $%{y:,.0f}<extra></extra>'
-}], {
-  ...baseLayout,
-  margin:{t:10,b:60,l:65,r:20},
-  yaxis:{...baseLayout.yaxis, tickformat:'$,.0f'},
-  xaxis:{...baseLayout.xaxis, title:{text:'Age Group', font:{size:11, color:'#64748b'}}}
-}, cfg);
-
-// ── 6. QUARTERLY TREND ────────────────────────────────────────────────────────
-Plotly.newPlot('chartTrend', [
-  {
-    type:'scatter', mode:'lines+markers',
-    x: quarterly.periods, y: quarterly.avg_cost,
-    name:'Avg Cost', yaxis:'y',
-    line:{color:'#1a56db', width:2.5}, marker:{size:7, color:'#1a56db'},
-    fill:'tozeroy', fillcolor:'rgba(26,86,219,0.08)',
-    hovertemplate:'<b>%{x}</b><br>Avg Cost: $%{y:,.0f}<extra></extra>'
-  },
-  {
-    type:'bar', x: quarterly.periods, y: quarterly.patients,
-    name:'Patients', yaxis:'y2',
-    marker:{color:'rgba(16,185,129,0.35)', line:{color:'rgba(16,185,129,0.7)', width:1}},
-    hovertemplate:'<b>%{x}</b><br>Patients: %{y}<extra></extra>'
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function groupStats(rows, key) {
+  const m = {};
+  for (const r of rows) {
+    const k = r[key];
+    if (!m[k]) m[k] = [];
+    m[k].push(r.Treatment_Cost);
   }
-], {
-  ...baseLayout,
-  margin:{t:20,b:80,l:75,r:65},
-  xaxis:{...baseLayout.xaxis, tickangle:-35},
-  yaxis:{...baseLayout.yaxis, title:{text:'Avg Cost (USD)', font:{size:11, color:'#1a56db'}}, tickformat:'$,.0f', tickfont:{color:'#1a56db'}},
-  yaxis2:{overlaying:'y', side:'right', showgrid:false, title:{text:'Patient Count', font:{size:11, color:'#059669'}}, tickfont:{color:'#059669'}},
-  legend:{orientation:'h', y:1.08, x:0, font:{size:11}}
-}, cfg);
+  return Object.fromEntries(Object.entries(m).map(([k, v]) => [k, {
+    avg:   v.reduce((a,b)=>a+b,0) / v.length,
+    total: v.reduce((a,b)=>a+b,0),
+    count: v.length
+  }]));
+}
+function byAvgDesc(obj) {
+  return Object.entries(obj).sort((a,b) => b[1].avg - a[1].avg);
+}
+function r(v) { return Math.round(v); }
 
-// ── 7. HEATMAP ───────────────────────────────────────────────────────────────
-const heatText = heatmap.values.map(row => row.map(v=>'$'+(v/1000).toFixed(0)+'K'));
-Plotly.newPlot('chartHeatmap', [{
-  type:'heatmap',
-  z: heatmap.values,
-  x: heatmap.diagnoses,
-  y: heatmap.regions,
-  text: heatText,
-  texttemplate:'%{text}',
-  textfont:{size:11, color:'#1e293b'},
-  colorscale:[
-    [0,'#eff6ff'],[0.25,'#bfdbfe'],[0.5,'#60a5fa'],
-    [0.75,'#1d4ed8'],[1,'#1e3a8a']
-  ],
-  showscale:true,
-  colorbar:{title:{text:'Avg Cost ($)', font:{size:11}}, tickformat:'$,.0f', len:0.8},
-  hovertemplate:'<b>%{y} · %{x}</b><br>Avg Cost: $%{z:,.0f}<extra></extra>'
-}], {
-  ...baseLayout,
-  margin:{t:10,b:100,l:90,r:80},
-  xaxis:{...baseLayout.xaxis, tickangle:-20, side:'bottom'},
-  yaxis:{...baseLayout.yaxis, showgrid:false}
-}, cfg);
+// ── MAIN ─────────────────────────────────────────────────────────────────────
+function buildDashboard(rows) {
+  const costs   = rows.map(r => r.Treatment_Cost);
+  const natAvg  = costs.reduce((a,b)=>a+b,0) / costs.length;
+  const total   = costs.reduce((a,b)=>a+b,0);
+  const maxCost = Math.max(...costs);
+
+  // KPI cards
+  document.getElementById('kpi-avg').textContent   = '$' + r(natAvg).toLocaleString();
+  document.getElementById('kpi-total').textContent = '$' + (total/1e6).toFixed(1) + 'M';
+  document.getElementById('kpi-max').textContent   = '$' + r(maxCost/1000) + 'K';
+  document.getElementById('regional-subtitle').textContent = 'vs national avg $' + r(natAvg).toLocaleString();
+
+  // ── LAYOUT DEFAULTS ────────────────────────────────────────────────────
+  const cfg  = {responsive:true, displayModeBar:false};
+  const font = {family:"Segoe UI, Arial, sans-serif", size:12, color:"#1e293b"};
+  const base = {
+    margin:{t:10,b:60,l:60,r:20},
+    paper_bgcolor:"#fff", plot_bgcolor:"#fff", font,
+    xaxis:{showgrid:false, tickfont:{size:11}},
+    yaxis:{showgrid:true, gridcolor:"#f1f5f9", tickfont:{size:11}},
+    hoverlabel:{bgcolor:"#1a56db", font:{color:"white", size:12}}
+  };
+
+  // ── 1. REGIONAL BAR ────────────────────────────────────────────────────
+  const reg = byAvgDesc(groupStats(rows, 'Region'));
+  const regNames = reg.map(e=>e[0]);
+  const regAvg   = reg.map(e=>r(e[1].avg));
+  Plotly.newPlot('chartRegional', [{
+    type:'bar', x:regAvg, y:regNames, orientation:'h',
+    marker:{color:regAvg.map(v=>v>r(natAvg)?'#1a56db':'#93b4f7'), line:{width:0}},
+    text:regAvg.map(v=>'$'+v.toLocaleString()),
+    textposition:'outside', textfont:{size:11, color:'#1e293b'},
+    hovertemplate:'<b>%{y}</b><br>Avg Cost: $%{x:,.0f}<extra></extra>',
+    customdata:reg.map(e=>e[1].count)
+  }], {
+    ...base,
+    margin:{t:10,b:40,l:80,r:90},
+    xaxis:{...base.xaxis, tickformat:'$,.0f', showgrid:true, gridcolor:'#f1f5f9'},
+    yaxis:{...base.yaxis, showgrid:false},
+    shapes:[{type:'line', x0:natAvg, x1:natAvg, y0:-0.5, y1:regNames.length-0.5,
+             line:{color:'#dc2626', width:2, dash:'dot'}}],
+    annotations:[{x:natAvg, y:regNames.length-0.3, text:'Nat. Avg', showarrow:false,
+                  font:{size:10, color:'#dc2626'}, xanchor:'center'}]
+  }, cfg);
+
+  // ── 2. DIAGNOSIS BAR ───────────────────────────────────────────────────
+  const diag = byAvgDesc(groupStats(rows, 'Diagnosis'));
+  const diagNames = diag.map(e=>e[0]);
+  const diagAvg   = diag.map(e=>r(e[1].avg));
+  Plotly.newPlot('chartDiagnosis', [{
+    type:'bar', x:diagNames, y:diagAvg,
+    marker:{color:['#dc2626','#ea580c','#d97706','#65a30d','#0891b2','#1a56db','#7c3aed'], line:{width:0}},
+    text:diagAvg.map(v=>'$'+(v/1000).toFixed(0)+'K'),
+    textposition:'outside', textfont:{size:10},
+    hovertemplate:'<b>%{x}</b><br>Avg: $%{y:,.0f}<br>Cases: %{customdata}<extra></extra>',
+    customdata:diag.map(e=>e[1].count)
+  }], {
+    ...base, margin:{t:10,b:80,l:65,r:20},
+    yaxis:{...base.yaxis, tickformat:'$,.0f'},
+    xaxis:{...base.xaxis, tickangle:-20}
+  }, cfg);
+
+  // ── 3. TREATMENT DONUT ─────────────────────────────────────────────────
+  const treatOrder = ['Inpatient','Emergency','Outpatient'];
+  const treatStats = groupStats(rows, 'Treatment_Type');
+  Plotly.newPlot('chartTreatment', [{
+    type:'pie', labels:treatOrder, values:treatOrder.map(t=>treatStats[t].count),
+    hole:0.52,
+    marker:{colors:['#1a56db','#f59e0b','#10b981'], line:{color:'#fff', width:2}},
+    textinfo:'label+percent',
+    hovertemplate:'<b>%{label}</b><br>Cases: %{value}<br>Avg Cost: $%{customdata:,.0f}<extra></extra>',
+    customdata:treatOrder.map(t=>r(treatStats[t].avg)),
+    textfont:{size:11}
+  }], {
+    ...base, margin:{t:10,b:30,l:10,r:10}, showlegend:false,
+    annotations:[{text:'Treatment<br>Mix', x:0.5, y:0.5, showarrow:false,
+                  font:{size:12, color:'#64748b'}, xanchor:'center'}]
+  }, cfg);
+
+  // ── 4. INSURANCE BAR ───────────────────────────────────────────────────
+  const ins = byAvgDesc(groupStats(rows, 'Insurance_Type'));
+  const insNames = ins.map(e=>e[0]);
+  const insAvg   = ins.map(e=>r(e[1].avg));
+  Plotly.newPlot('chartInsurance', [{
+    type:'bar', x:insNames, y:insAvg,
+    marker:{color:['#1a56db','#10b981','#f59e0b'], line:{width:0}},
+    text:insAvg.map(v=>'$'+v.toLocaleString()),
+    textposition:'outside', textfont:{size:11},
+    hovertemplate:'<b>%{x}</b><br>Avg Cost: $%{y:,.0f}<br>Patients: %{customdata}<extra></extra>',
+    customdata:ins.map(e=>e[1].count)
+  }], {
+    ...base, margin:{t:10,b:80,l:65,r:20},
+    yaxis:{...base.yaxis, tickformat:'$,.0f'},
+    xaxis:{...base.xaxis, tickangle:-10}
+  }, cfg);
+
+  // ── 5. AGE GROUP BAR ───────────────────────────────────────────────────
+  const ageOrder = ['18-30','31-45','46-60','61-75','76+'];
+  const ageStats = groupStats(rows, 'Age_Group');
+  const ageAvg   = ageOrder.map(g=>r(ageStats[g]?.avg||0));
+  Plotly.newPlot('chartAge', [{
+    type:'bar', x:ageOrder, y:ageAvg,
+    marker:{color:['#bfdbfe','#93c5fd','#60a5fa','#2563eb','#1e40af'], line:{width:0}},
+    text:ageAvg.map(v=>'$'+(v/1000).toFixed(0)+'K'),
+    textposition:'outside', textfont:{size:11},
+    hovertemplate:'<b>Age %{x}</b><br>Avg Cost: $%{y:,.0f}<extra></extra>'
+  }], {
+    ...base, margin:{t:10,b:60,l:65,r:20},
+    yaxis:{...base.yaxis, tickformat:'$,.0f'},
+    xaxis:{...base.xaxis, title:{text:'Age Group', font:{size:11, color:'#64748b'}}}
+  }, cfg);
+
+  // ── 6. QUARTERLY TREND ─────────────────────────────────────────────────
+  const qMap = {};
+  for (const row of rows) {
+    const d = new Date(row.Admission_Date);
+    const key = d.getFullYear() + ' Q' + (Math.floor(d.getMonth()/3)+1);
+    if (!qMap[key]) qMap[key] = [];
+    qMap[key].push(row.Treatment_Cost);
+  }
+  const qPeriods = Object.keys(qMap).sort();
+  const qAvg  = qPeriods.map(k=>r(qMap[k].reduce((a,b)=>a+b,0)/qMap[k].length));
+  const qPats = qPeriods.map(k=>qMap[k].length);
+  Plotly.newPlot('chartTrend', [
+    {type:'scatter', mode:'lines+markers', x:qPeriods, y:qAvg, name:'Avg Cost', yaxis:'y',
+     line:{color:'#1a56db', width:2.5}, marker:{size:7, color:'#1a56db'},
+     fill:'tozeroy', fillcolor:'rgba(26,86,219,0.08)',
+     hovertemplate:'<b>%{x}</b><br>Avg Cost: $%{y:,.0f}<extra></extra>'},
+    {type:'bar', x:qPeriods, y:qPats, name:'Patients', yaxis:'y2',
+     marker:{color:'rgba(16,185,129,0.35)', line:{color:'rgba(16,185,129,0.7)', width:1}},
+     hovertemplate:'<b>%{x}</b><br>Patients: %{y}<extra></extra>'}
+  ], {
+    ...base, margin:{t:20,b:80,l:75,r:65},
+    xaxis:{...base.xaxis, tickangle:-35},
+    yaxis:{...base.yaxis, title:{text:'Avg Cost (USD)', font:{size:11, color:'#1a56db'}}, tickformat:'$,.0f', tickfont:{color:'#1a56db'}},
+    yaxis2:{overlaying:'y', side:'right', showgrid:false, title:{text:'Patient Count', font:{size:11, color:'#059669'}}, tickfont:{color:'#059669'}},
+    legend:{orientation:'h', y:1.08, x:0, font:{size:11}}
+  }, cfg);
+
+  // ── 7. HEATMAP ─────────────────────────────────────────────────────────
+  const hRegions = ['Midwest','Northeast','Southeast','Southwest','West'];
+  const hDiags   = ['Cardiovascular','Diabetes','Mental Health','Neurological','Oncology','Orthopedic','Respiratory'];
+  const hMap = {};
+  for (const row of rows) {
+    const k = row.Region + '|' + row.Diagnosis;
+    if (!hMap[k]) hMap[k] = [];
+    hMap[k].push(row.Treatment_Cost);
+  }
+  const hVals = hRegions.map(reg =>
+    hDiags.map(d => { const v=hMap[reg+'|'+d]; return v ? r(v.reduce((a,b)=>a+b,0)/v.length) : 0; })
+  );
+  Plotly.newPlot('chartHeatmap', [{
+    type:'heatmap', z:hVals, x:hDiags, y:hRegions,
+    text:hVals.map(row=>row.map(v=>'$'+(v/1000).toFixed(0)+'K')),
+    texttemplate:'%{text}', textfont:{size:11, color:'#1e293b'},
+    colorscale:[[0,'#eff6ff'],[0.25,'#bfdbfe'],[0.5,'#60a5fa'],[0.75,'#1d4ed8'],[1,'#1e3a8a']],
+    showscale:true,
+    colorbar:{title:{text:'Avg Cost ($)', font:{size:11}}, tickformat:'$,.0f', len:0.8},
+    hovertemplate:'<b>%{y} · %{x}</b><br>Avg Cost: $%{z:,.0f}<extra></extra>'
+  }], {
+    ...base, margin:{t:10,b:100,l:90,r:80},
+    xaxis:{...base.xaxis, tickangle:-20, side:'bottom'},
+    yaxis:{...base.yaxis, showgrid:false}
+  }, cfg);
+}
 </script>
 </body>
 </html>
